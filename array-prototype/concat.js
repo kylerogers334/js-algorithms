@@ -5,7 +5,7 @@ function concat() {
     
     for (let i = 0; i < arguments.length; i++) {
         for (let j = 0; j < arguments[i].length; j++) {
-            concatenatedArray.push(arguments[i][j]);
+            concatenatedArray[concatenatedArray.length] = arguments[i][j];
         }
     }
     
