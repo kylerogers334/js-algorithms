@@ -1,5 +1,3 @@
-// INCOMPLETE
-
 function concat() {
     let concatenatedArray = [];
     
