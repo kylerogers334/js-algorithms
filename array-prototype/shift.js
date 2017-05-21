@@ -21,14 +21,3 @@ const myArray = ["a", "b", "c", "d"];
 
 console.log(shift(myArray));
 console.log(myArray);
-
-
-
-
-
-
-// var a = [1, 2, 3];
-// var b = a.shift();
-
-// console.log(a); // [2, 3]
-// console.log(b); // 1
