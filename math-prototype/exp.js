@@ -1,19 +1,19 @@
 function exp(n) {
     let e = Math.E;
-    
+    let x = e;
     if (n === 0) {
         return 1;
     }
     
     for (let i = 1; i < Math.abs(n); i++) {
-        e *= e;
+        x *= e;
     }
     
     if (n < 0) {
-        return 1 / e;
+        return 1 / x;
     }
     
-    return e;
+    return x;
 }
 
 console.log(exp(2));
