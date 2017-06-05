@@ -17,7 +17,6 @@ function sin(n) {
             n += Math.pow(x, i) / factorial(i);
             sign = "-";
         }
-        console.log(n);
     }
     return n;
 }
