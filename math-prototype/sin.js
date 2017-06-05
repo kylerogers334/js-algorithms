@@ -1,4 +1,3 @@
-// run with node --harmony
 function sin(n) {
     let x = n;
     function factorial(f) {
