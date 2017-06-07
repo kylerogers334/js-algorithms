@@ -13,4 +13,4 @@ function sqrt(n, guess) {
     return sqrt(n, nextGuess);
 }
 
-console.log(sqrt(16));
+console.log(Math.pow(sqrt(1000), 2));
