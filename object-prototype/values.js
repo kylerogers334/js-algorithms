@@ -1,5 +1,5 @@
 function values(obj) {
-    let a = [];
+    const a = [];
     
     for (let i in obj) {
         a.push(obj[i]);
