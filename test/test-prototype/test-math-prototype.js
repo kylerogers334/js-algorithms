@@ -8,7 +8,7 @@ glob.sync( '../../math-prototype/*.js' ).forEach( function( file ) {
     global[p] = require(path.resolve(file));
 });
 
-describe('array-prototype algorithms', function() {
+describe('math-prototype algorithms', function() {
     it.skip('correctly implements abs', function() {
         
     });

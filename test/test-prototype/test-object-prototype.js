@@ -8,7 +8,7 @@ glob.sync( '../../object-prototype/*.js' ).forEach( function( file ) {
     global[p] = require(path.resolve(file));
 });
 
-describe('number-prototype algorithms', function() {
+describe('object-prototype algorithms', function() {
     it.skip('correctly implements assign', function() {
         
     });
