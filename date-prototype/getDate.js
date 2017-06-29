@@ -1,7 +1,9 @@
 function getDate(d) {
-    return String(d).split(' ')[2];
+    return Number(
+            String(d)
+            .split(' ')[2]);
 }
 
-var date = new Date(Date.now())
+var date = new Date(Date.now()).getDate()
 console.log(getDate(date));
-console.log(String(date));
+console.log(typeof date);
