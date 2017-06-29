@@ -1,3 +1,5 @@
 function getFullYear(d) {
-    return String(d).split(' ')[3];
+    return Number(
+            String(d)
+            .split(' ')[3]);
 }
