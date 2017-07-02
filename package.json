@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/kylerogers334/js-algorithms/issues"
   },
-  "homepage": "https://github.com/kylerogers334/js-algorithms#readme"
+  "homepage": "https://github.com/kylerogers334/js-algorithms#readme",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "eslint": "^4.0.0",
+    "glob": "^7.1.2",
+    "mocha": "^3.4.2"
+  }
 }
