@@ -1,6 +1,6 @@
 const toUTCString = require('./toUTCString');
 
-function getMinutes(d) {
+function getUTCMinutes(d) {
     return Number(
             toUTCString(d)
             .split(' ')[4]
