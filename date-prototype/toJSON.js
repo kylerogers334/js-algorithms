@@ -32,3 +32,5 @@ function toJSON(d) {
 
     return `${year}-${month}-${day}T${hour}:${min}:${sec}.${ms}Z`;
 }
+
+module.exports = toJSON;
