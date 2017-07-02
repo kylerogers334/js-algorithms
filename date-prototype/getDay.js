@@ -1,6 +1,6 @@
 function getDay(d) {
     // Turn date into number of days in UNIX time.
-    d = Number(String(Number(d) / 86400000).split('.')[0]);
+    d = Math.floor(Number(d) / 86400000);
     
     while (d > 7) {
         d %= 7;
@@ -18,3 +18,7 @@ function getDay(d) {
         case 2: return 6;
     }
 }
+
+var x = new Date(2017, 7)
+console.log(x.getDay());
+console.log(getDay(x))
