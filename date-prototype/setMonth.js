@@ -1,4 +1,4 @@
-function setMinutes(d, month) {
+function setMonth(d, month) {
 
     // Milliseconds must be extracted before coercion.
     // MS is lost in coercion.
