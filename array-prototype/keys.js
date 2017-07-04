@@ -1,4 +1,4 @@
-function makeIterator(array) {
+function keys(array) {
     let nextIndex = 0;
     
     return {
