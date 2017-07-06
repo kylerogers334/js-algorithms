@@ -1,11 +1,9 @@
-function pow(n, exp) {
-    let x = n;
-    for (let i = 1; i < exp; i++) {
-        x *= n;
+function pow(base, exponent){
+    let n = base;
+    
+    for (let i = 1; i < exponent; i++) {
+        n *= base;
     }
-    return x;
+    
+    return n;
 }
-
-console.log(pow(2, 1));
-console.log(pow(5, 3));
-console.log(pow(2, 10));
