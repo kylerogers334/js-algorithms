@@ -1,6 +1,5 @@
 function apply(fn, thisArg, argsArray) {
-    const args = arguments[2];
-    return (fn.bind(thisArg))(...args);
+    return fn.bind(thisArg)(...argsArray);
 }
 
 module.exports = apply;
