@@ -139,12 +139,16 @@ describe('array-prototype algorithms', function() {
         expect(push(arr1, toAdd)).to.deep.equal(arr2.push(toAdd));
     });
     
-    it.skip('correctly implements reduce', function() {
-        
+    it('correctly implements reduce', function() {
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        const evens = function(i) { return i % 2 === 0 };
+        expect(reduce(arr, evens)).to.deep.equal(arr.reduce(evens))
     });
     
-    it.skip('correctly implements reduceRight', function() {
-        
+    it('correctly implements reduceRight', function() {
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        const odds = function(i) { return i % 2 !== 0 };
+        expect(reduceRight(arr, odds)).to.deep.equal(arr.reduceRight(odds))
     });
     
     it.skip('correctly implements reverse', function() {
