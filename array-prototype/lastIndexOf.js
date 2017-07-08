@@ -6,6 +6,4 @@ function lastIndexOf(arr, toFind) {
     return -1;
 }
 
-var a = [2, 5, 9, 2];
-console.log(lastIndexOf(a, 2)); // 3
-console.log(lastIndexOf(a, 7)); // -1
+module.exports = lastIndexOf;

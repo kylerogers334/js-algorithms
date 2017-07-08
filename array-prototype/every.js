@@ -6,6 +6,4 @@ function every(arr, fn) {
     return true;
 }
 
-console.log(every([1,2,3,"4",5], (x) => { return typeof x === "number" }));
-console.log(every([1,2,3,4,5], (x) => { return x < 10 }));
-
+module.exports = every;

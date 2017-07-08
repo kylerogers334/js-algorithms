@@ -18,7 +18,4 @@ function unshift(arr) {
     return newLength;
 }
 
-const myArray = ["c", "d", "e"];
-
-console.log(unshift(myArray));
-console.log(myArray);
+module.exports = unshift;

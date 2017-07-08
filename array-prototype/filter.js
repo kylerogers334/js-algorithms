@@ -10,8 +10,4 @@ function filter(arr, fn) {
     return newArr;
 }
 
-console.log(
-    filter([1,20,30,8,5], (n) => {
-        return n > 10 === true; 
-    })
-);
+module.exports = filter;

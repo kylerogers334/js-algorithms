@@ -20,6 +20,4 @@ function splice(arr, start, stop) {
     return newArr;
 }
 
-const myArray = [1,2,3,4,5];
-console.log(splice(myArray, 0, 3));
-console.log(myArray);
+module.exports = splice;

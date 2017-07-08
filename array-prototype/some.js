@@ -6,5 +6,4 @@ function some(arr, fn) {
     return false;
 }
 
-console.log(some([2, 5, 8, 1, 4], x => { return x > 10; }));  // false
-console.log(some([2, 5, 8, 1, 14], x => { return x > 10; }));  // true
+module.exports = some;

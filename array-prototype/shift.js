@@ -17,7 +17,4 @@ function shift(arr) {
     return firstItem;
 }
 
-const myArray = ["a", "b", "c", "d"];
-
-console.log(shift(myArray));
-console.log(myArray);
+module.exports = shift;

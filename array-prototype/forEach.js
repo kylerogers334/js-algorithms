@@ -4,6 +4,4 @@ function forEach(arr, fn) {
     }
 }
 
-const myArr = [1,2,3,4,5];
-
-forEach(myArr, (item) => { console.log(item); });
+module.exports = forEach;

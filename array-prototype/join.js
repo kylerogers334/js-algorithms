@@ -7,6 +7,4 @@ function join(arr, separator=",") {
     return str;
 }
 
-const arr = ["1","2","3"];
-
-console.log(join(arr, "..."));
+module.exports = join;

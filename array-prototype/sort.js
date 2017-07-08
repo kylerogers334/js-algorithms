@@ -1,4 +1,4 @@
-function bubbleSort(arr, compareFn) {
+function sort(arr, compareFn) {
     if (!compareFn) { 
         // sort lowest to highest by default
         compareFn = function(a, b) { return a - b };
@@ -16,4 +16,4 @@ function bubbleSort(arr, compareFn) {
     return arr;
 }
 
-console.log(bubbleSort([9,2,4,5,1,0,3,8,7,6]));
+module.exports = sort;

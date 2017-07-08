@@ -1,4 +1,4 @@
-function entires(array) {
+function entries(array) {
     let nextIndex = 0;
     
     return {
@@ -9,3 +9,5 @@ function entires(array) {
        }
     };
 }
+
+module.exports = entries;

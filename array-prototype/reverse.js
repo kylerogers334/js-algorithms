@@ -12,6 +12,4 @@ function reverse(arr) {
     arr = arrCopy;
 }
 
-const arr = [1,2,7,4,5];
-reverse(arr);
-console.log(arr);
+module.exports = reverse;

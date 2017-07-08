@@ -10,3 +10,4 @@ function keys(array) {
     };
 }
 
+module.exports = keys;

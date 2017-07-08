@@ -1,7 +1,3 @@
-function add(a, b) {
-    return a + b;
-}
-
 function reduceRight(arr, fn, startingValue) {
     let i = arr.length - 1; 
     let value;
@@ -21,4 +17,4 @@ function reduceRight(arr, fn, startingValue) {
     return value;
 }
 
-console.log(reduceRight(["a", "b", "c", "d", "e"], add, 2));
+module.exports = reduceRight;

@@ -1,4 +1,5 @@
-function of() {
+// of is a reserved word
+function _of() {
     const arr = [];
     
     for (let i = 0; i < arguments.length; i++) {
@@ -8,4 +9,4 @@ function of() {
     return arr;
 }
 
-console.log(of(1,2,3,4,5,6));
+module.exports = _of;

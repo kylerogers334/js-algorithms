@@ -1,7 +1,3 @@
-function add(a, b) {
-    return a + b;
-}
-
 function reduce(arr, fn, startingValue) {
     const len = arr.length;
     let i = 0; 
@@ -22,4 +18,4 @@ function reduce(arr, fn, startingValue) {
     return value;
 }
 
-console.log(reduce(["a", "b", "c", "d", "e"], add, 2));
+module.exports = reduce;

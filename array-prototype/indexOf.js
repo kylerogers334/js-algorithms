@@ -6,6 +6,4 @@ function indexOf(arr, toFind) {
     return -1;
 }
 
-var a = [2, 9, 9]; 
-console.log(indexOf(a, 2)); // 0 
-console.log(indexOf(a, 7)); // -1
+module.exports = indexOf;

@@ -14,4 +14,4 @@ function fill(arr, value, start=0, end=arr.length) {
     return arr;
 }
 
-console.log(fill([1,2,3,4,5], 1, 0, -2));
+module.exports = fill;

@@ -17,4 +17,4 @@ function slice(arr, start=0, end) {
     return slicedArr;
 }
 
-console.log(slice([1,2,3,4,5], 1, 5));
+module.exports = slice;

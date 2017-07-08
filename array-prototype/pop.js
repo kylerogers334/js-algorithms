@@ -4,5 +4,4 @@ function pop(arr) {
     return last;
 }
 
-const x = [1,2,3,4,5]; // empty array inputs return undefined
-console.log(pop(x), x);
+module.exports = pop;
