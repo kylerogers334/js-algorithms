@@ -119,11 +119,13 @@ describe('string-prototype algorithms', function() {
         expect(toUpperCase(str)).to.equal(str.toUpperCase())
     });
     
-    it.skip('correctly implements trimLeft', function() {
-        
+    it('correctly implements trimLeft', function() {
+        const str = '  abc';
+        expect(trimLeft(str)).to.equal(str.trimLeft());
     });
     
-    it.skip('correctly implements trimRight', function() {
-        
+    it('correctly implements trimRight', function() {
+        const str = 'abc      ';
+        expect(trimRight(str)).to.equal(str.trimRight());
     });
 });
