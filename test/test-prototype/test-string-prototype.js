@@ -79,11 +79,18 @@ describe('string-prototype algorithms', function() {
         expect(slice(str, 0, 100)).to.equal(str.slice(0, 100))
     });
     
-    it.skip('correctly implements split', function() {
-        
+    it('correctly implements split', function() {
+        const str = 'abcdefghijklmnopqrstuvwxyz';
+        expect(split(str)).to.deep.equal(str.split())
+        expect(split(str, 'z')).to.deep.equal(str.split('z'))
+        expect(split(str, '123')).to.deep.equal(str.split('123'))
     });
     
-    it.skip('correctly implements substr', function() {
+    it('correctly implements substr', function() {
+        const str = 'abcdefghijklmnopqrstuvwxyz';
+        expect(substr(str)).to.equal(str.substr());
+        expect(substr(str, 3, 10)).to.equal(str.substr(3, 10));
+        expect(substr(str, -1000, 1000)).to.equal(str.substr(-1000, 1000));
         
     });
     
