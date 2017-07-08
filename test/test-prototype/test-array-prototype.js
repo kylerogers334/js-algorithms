@@ -1,9 +1,8 @@
 'use strict';
-const expect = require('chai').expect;
-const glob = require( 'glob' )
-    , path = require( 'path' );
-
 require('babel-polyfill');
+const expect = require('chai').expect;
+const glob = require( 'glob' );
+const path = require( 'path' );
 
 glob.sync( './array-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
@@ -156,19 +155,32 @@ describe('array-prototype algorithms', function() {
         expect(reverse(arr)).to.deep.equal(arr.reverse())
     });
     
-    it.skip('correctly implements shift', function() {
+    it('correctly implements shift', function() {
         const arr1 = ['a', 'b', 'a', 'd', 'e'];
         const arr2 = ['a', 'b', 'a', 'd', 'e'];
         expect(shift(arr1)).to.equal(arr2.shift());
         expect(arr1).to.deep.equal(arr2);
     });
     
-    it.skip('correctly implements some', function() {
-        
+    it('correctly implements slice', function() {
+        const arr = ['a', 'b', 'a', 'd', 'e'];
+        expect(slice(arr, 1, 3)).to.deep.equal(arr.slice(1, 3))
+        expect(slice(arr, 0, 2)).to.deep.equal(arr.slice(0, 2))
     });
     
-    it.skip('correctly implements sort', function() {
-        
+    it('correctly implements some', function() {
+        const bigArr = [12, 5, 8, 1, 4];
+        const smallArr = [0, 5, 8, 1, 4];
+        const isBig = function(i) { return i > 10 };
+        expect(some(bigArr, isBig)).to.equal(bigArr.some(isBig))
+        expect(some(smallArr, isBig)).to.equal(smallArr.some(isBig))
+    });
+    
+    it('correctly implements sort', function() {
+        const arr = [0, 5, 3, 2, 9, 8, 4, 1, 2, 7];
+        const reverseSort = function(a, b) { return b - a };
+        expect(sort(arr)).to.deep.equal(arr.sort());
+        expect(sort(arr, reverseSort)).to.deep.equal(arr.sort(reverseSort));
     });
     
     it.skip('correctly implements splice', function() {
