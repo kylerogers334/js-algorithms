@@ -125,14 +125,14 @@ describe('array-prototype algorithms', function() {
     });
     
     it('correctly implements pop', function() {
-        const arr1 = ['a', 'b', 'a', 'd', 'e'];
-        const arr2 = ['a', 'b', 'a', 'd', 'e'];
+        const arr1 = ['a', 'b', 'c', 'd', 'e'];
+        const arr2 = ['a', 'b', 'c', 'd', 'e'];
         expect(pop(arr1)).to.deep.equal(arr2.pop());
     });
     
     it('correctly implements push', function() {
-        const arr1 = ['a', 'b', 'a', 'd', 'e'];
-        const arr2 = ['a', 'b', 'a', 'd', 'e'];
+        const arr1 = ['a', 'b', 'c', 'd', 'e'];
+        const arr2 = ['a', 'b', 'c', 'd', 'e'];
         const toAdd = ['f', 'g', 'h'];
         expect(push(arr1, 5)).to.deep.equal(arr2.push(5));
         expect(push(arr1, toAdd)).to.deep.equal(arr2.push(toAdd));
@@ -151,19 +151,19 @@ describe('array-prototype algorithms', function() {
     });
     
     it('correctly implements reverse', function() {
-        const arr = ['a', 'b', 'a', 'd', 'e'];
+        const arr = ['a', 'b', 'c', 'd', 'e'];
         expect(reverse(arr)).to.deep.equal(arr.reverse())
     });
     
     it('correctly implements shift', function() {
-        const arr1 = ['a', 'b', 'a', 'd', 'e'];
-        const arr2 = ['a', 'b', 'a', 'd', 'e'];
+        const arr1 = ['a', 'b', 'c', 'd', 'e'];
+        const arr2 = ['a', 'b', 'c', 'd', 'e'];
         expect(shift(arr1)).to.equal(arr2.shift());
         expect(arr1).to.deep.equal(arr2);
     });
     
     it('correctly implements slice', function() {
-        const arr = ['a', 'b', 'a', 'd', 'e'];
+        const arr = ['a', 'b', 'c', 'd', 'e'];
         expect(slice(arr, 1, 3)).to.deep.equal(arr.slice(1, 3))
         expect(slice(arr, 0, 2)).to.deep.equal(arr.slice(0, 2))
     });
@@ -183,15 +183,21 @@ describe('array-prototype algorithms', function() {
         expect(sort(arr, reverseSort)).to.deep.equal(arr.sort(reverseSort));
     });
     
-    it.skip('correctly implements splice', function() {
-        
+    it('correctly implements splice', function() {
+        const myFish1 = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        const myFish2 = ['angel', 'clown', 'mandarin', 'sturgeon'];
+        expect(splice(myFish1, 2, 0, 'drum')).to.deep.equal(myFish2.splice(2, 0, 'drum'));
     });
     
-    it.skip('correctly implements toString', function() {
-        
+    it('correctly implements toString', function() {
+        const arr = [1, 2, 3];
+        expect(toString(arr)).to.equal(arr.toString());
     });
     
-    it.skip('correctly implements unshift', function() {
-        
+    it('correctly implements unshift', function() {
+        const arr1 = ['a', 'b', 'c', 'd', 'e'];
+        const arr2 = ['a', 'b', 'c', 'd', 'e'];
+        expect(unshift(arr1, 4, 5)).to.equal(arr2.unshift(4, 5));
+        expect(arr1).to.deep.equal(arr2);
     });
 });
