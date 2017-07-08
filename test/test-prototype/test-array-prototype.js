@@ -113,12 +113,16 @@ describe('array-prototype algorithms', function() {
         expect(indexOf(arr, 'z')).to.equal(arr.indexOf('z'));
     });
     
-    it.skip('correctly implements map', function() {
-        
+    it('correctly implements map', function() {
+        const arr = [1, 2, 3, 4, 5, 6];
+        const add10 = function(i) { return i + 10 };
+        expect(map(arr, add10)).to.deep.equal(arr.map(add10))
     });
     
-    it.skip('correctly implements of', function() {
-        
+    it('correctly implements of', function() {
+        // underscore added to prevent conflict with reserved word 'of'
+        const arr = [1, 2, 3, 4, 5];
+        expect(of(arr)).to.deep.equal(Array.of(arr));
     });
     
     it.skip('correctly implements pop', function() {
