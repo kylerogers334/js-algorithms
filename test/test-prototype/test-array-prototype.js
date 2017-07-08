@@ -55,15 +55,19 @@ describe('array-prototype algorithms', function() {
     it('correctly implements find', function() {
         const arr = [1, 7, 500, 50000, 8];
         const largeNum = function(i) { return i > 100 };
-        expect(find(arr, largeNum)).to.equal(arr.find(largeNum))
+        expect(find(arr, largeNum)).to.equal(arr.find(largeNum));
     });
     
-    it.skip('correctly implements findIndex', function() {
-        
+    it('correctly implements findIndex', function() {
+        const arr = [1, 7, 500, 50000, 8];
+        const largeNum = function(i) { return i > 100 };
+        expect(findIndex(arr, largeNum)).to.equal(arr.findIndex(largeNum));
     });
     
-    it.skip('correctly implements forEach', function() {
-        
+    it('correctly implements forEach', function() {
+        const arr = ['a', 'b', 'c', 'd', 'e'];
+        const addLetter = function(i) { arr[i] += 'z' };
+        expect(forEach(arr, addLetter)).to.deep.equal(arr.forEach(addLetter))
     });
     
     it.skip('correctly implements includes', function() {
