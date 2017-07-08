@@ -10,6 +10,8 @@ function reverse(arr) {
         j++;
     }
     arr = arrCopy;
+    
+    return arr;
 }
 
 module.exports = reverse;
