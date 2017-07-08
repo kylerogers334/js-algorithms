@@ -5,9 +5,7 @@ function trimRight(str) {
             break;
         }
     }
-    return str.substring(0, trimUpTo);
+    return str.substring(0, trimUpTo + 1);
 }
 
-console.log(trimRight("   fooo  "));
-console.log(trimRight("   foO x Oo  "));
-console.log(trimRight("   foo  xxxxxx"));
+module.exports = trimRight;

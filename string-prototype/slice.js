@@ -22,7 +22,4 @@ function slice(str, start, end) {
     return s;
 }
 
-console.log(slice('0123456', 2));
-console.log('0123456'.slice(2));
-console.log(slice('0123456', -2, -1));
-console.log('0123456'.slice(-2,-1));
+module.exports = slice;

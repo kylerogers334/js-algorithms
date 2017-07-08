@@ -34,4 +34,4 @@ function toUpperCase(str) {
     return upper.join("");
 }
 
-console.log(toUpperCase("jlasj083jlkamasl81*($asdf"));
+module.exports = toUpperCase;

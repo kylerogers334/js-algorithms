@@ -17,3 +17,5 @@ function substr(str, start=0, length=str.length) {
 
     return newStr;
 }
+
+module.exports = substr;

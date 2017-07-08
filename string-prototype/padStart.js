@@ -7,3 +7,5 @@ function padStart(str, targetLength, padStr=" ") {
 
     return padStr + str;
 }
+
+module.exports = padStart;

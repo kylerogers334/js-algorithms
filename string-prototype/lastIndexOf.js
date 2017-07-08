@@ -14,7 +14,4 @@ function lastIndexOf(str, toFind, fromIndex) {
     return -1;
 }
 
-console.log(lastIndexOf("canal", "a")); // 3
-console.log(lastIndexOf("canal", "x")); // -1
-console.log(lastIndexOf("canal", "a", 2)); // 1
-console.log(lastIndexOf("canal", "a", 0)); // -1
+module.exports = lastIndexOf;

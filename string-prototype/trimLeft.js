@@ -12,6 +12,4 @@ function trimLeft(str) {
     return cleanedArr.join("");
 }
 
-console.log(trimLeft("   foo  "));
-console.log(trimLeft("   foO x Oo  "));
-console.log(trimLeft("   foo  xxxxxx"));
+module.exports = trimLeft;

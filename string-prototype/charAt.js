@@ -6,5 +6,4 @@ function charAt(str, index = 0) {
     return str[index];
 }
 
-console.log(charAt("abcd", 2)); // 'c'
-console.log(charAt("abcd", 5)); // out of range => ''
+module.exports = charAt;

@@ -14,8 +14,4 @@ function endsWith(str, item, maxSearch) {
     return false;
 }
 
-console.log(endsWith("abcdefghijk", "k")); // true
-console.log(endsWith("abcdefghijk", "x")); // false
-console.log(endsWith("abcdefghijk", "d", 4)); // true
-//true, ignores parameters higher than str.length
-console.log(endsWith("abcdefghijk", "k", 1230));
+module.exports = endsWith;

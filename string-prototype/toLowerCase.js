@@ -34,4 +34,4 @@ function toLowerCase(str) {
     return lower.join("");
 }
 
-console.log(toLowerCase("./.AKLSJF!KASJ$D@#FLK"));
+module.exports = toLowerCase;

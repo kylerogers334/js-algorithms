@@ -5,4 +5,4 @@ function concat(str) {
     return str;
 }
 
-console.log(concat("Hello ", "I'm ", "John."));
+module.exports = concat;
