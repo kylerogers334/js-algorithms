@@ -109,12 +109,14 @@ describe('string-prototype algorithms', function() {
         expect(substring(str, 89, 90)).to.equal(str.substring(89, 90))
     });
     
-    it.skip('correctly implements toLowerCase', function() {
-        
+    it('correctly implements toLowerCase', function() {
+        const str = 'ABC';
+        expect(toLowerCase(str)).to.equal(str.toLowerCase())
     });
     
-    it.skip('correctly implements toUpperCase', function() {
-        
+    it('correctly implements toUpperCase', function() {
+        const str = 'abc';
+        expect(toUpperCase(str)).to.equal(str.toUpperCase())
     });
     
     it.skip('correctly implements trimLeft', function() {
@@ -122,10 +124,6 @@ describe('string-prototype algorithms', function() {
     });
     
     it.skip('correctly implements trimRight', function() {
-        
-    });
-    
-    it.skip('correctly implements valueOf', function() {
         
     });
 });
