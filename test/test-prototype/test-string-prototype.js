@@ -1,20 +1,25 @@
 'use strict';
+require('babel-polyfill');
 const expect = require('chai').expect;
-const glob = require( 'glob' )
-    , path = require( 'path' );
+const glob = require( 'glob' );
+const path = require( 'path' );
 
-glob.sync( '../../string-prototype/*.js' ).forEach( function( file ) {
+glob.sync( './string-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
     global[p] = require(path.resolve(file));
 });
 
 describe('string-prototype algorithms', function() {
-    it.skip('correctly implements charAt', function() {
-        
+    it('correctly implements charAt', function() {
+        const str = 'abcdefg';
+        expect(charAt(str, 3)).to.equal(str.charAt(3))
+        expect(charAt(str, 10)).to.equal(str.charAt(10))
     });
     
-    it.skip('correctly implements concat', function() {
-        
+    it('correctly implements concat', function() {
+        const str = 'abcdefg';
+        const extraStr = 'hijklmnopqrstuvwxyz';
+        expect(concat(str, extraStr)).to.equal(str.concat(extraStr))
     });
     
     it.skip('correctly implements endsWith', function() {
