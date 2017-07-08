@@ -86,6 +86,13 @@ describe('string-prototype algorithms', function() {
         expect(split(str, '123')).to.deep.equal(str.split('123'))
     });
     
+    it('correctly implements startsWith', function() {
+        const str = 'abcdefg';
+        expect(startsWith(str, 'a')).to.equal(str.startsWith('a'));
+        expect(startsWith(str, 'd', 3)).to.equal(str.startsWith('d', 3));
+        expect(startsWith(str, 'z')).to.equal(str.startsWith('z'));
+    });
+    
     it('correctly implements substr', function() {
         const str = 'abcdefghijklmnopqrstuvwxyz';
         expect(substr(str)).to.equal(str.substr());
@@ -94,12 +101,12 @@ describe('string-prototype algorithms', function() {
         
     });
     
-    it.skip('correctly implements substring', function() {
-        
-    });
-    
-    it.skip('correctly implements startsWith', function() {
-        
+    it('correctly implements substring', function() {
+        const str = 'abcdefg';
+        expect(substring(str, 0, 3)).to.equal(str.substring(0, 3))
+        expect(substring(str, 3, 0)).to.equal(str.substring(3, 0))
+        expect(substring(str, 4, 7)).to.equal(str.substring(4, 7))
+        expect(substring(str, 89, 90)).to.equal(str.substring(89, 90))
     });
     
     it.skip('correctly implements toLowerCase', function() {
