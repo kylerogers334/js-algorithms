@@ -12,22 +12,29 @@ glob.sync( './string-prototype/*.js' ).forEach( function( file ) {
 describe('string-prototype algorithms', function() {
     it('correctly implements charAt', function() {
         const str = 'abcdefg';
-        expect(charAt(str, 3)).to.equal(str.charAt(3))
-        expect(charAt(str, 10)).to.equal(str.charAt(10))
+        expect(charAt(str, 3)).to.equal(str.charAt(3));
+        expect(charAt(str, 10)).to.equal(str.charAt(10));
     });
     
     it('correctly implements concat', function() {
         const str = 'abcdefg';
         const extraStr = 'hijklmnopqrstuvwxyz';
-        expect(concat(str, extraStr)).to.equal(str.concat(extraStr))
+        expect(concat(str, extraStr)).to.equal(str.concat(extraStr));
     });
     
-    it.skip('correctly implements endsWith', function() {
-        
+    it('correctly implements endsWith', function() {
+        const str = 'abcdefg';
+        expect(endsWith(str, 'g')).to.equal(str.endsWith('g'));
+        expect(endsWith(str, 'g', 3)).to.equal(str.endsWith('g', 3));
+        expect(endsWith(str, 'z')).to.equal(str.endsWith('z'));
     });
     
-    it.skip('correctly implements includes', function() {
-        
+    it('correctly implements includes', function() {
+        const str = 'abcdefg';
+        const doesInclude = 'bcd';
+        const doesntInclude = 'xyz';
+        expect(includes(str, doesInclude)).to.equal(str.includes(doesInclude));
+        expect(includes(str, doesntInclude)).to.equal(str.includes(doesntInclude));
     });
     
     it.skip('correctly implements indexOf', function() {
