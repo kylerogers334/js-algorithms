@@ -84,12 +84,17 @@ describe('array-prototype algorithms', function() {
         expect(indexOf(arr, 'z')).to.equal(arr.indexOf('z'));
     });
 
-    it.skip('correctly implements isArray', function() {
-        
+    it('correctly implements isArray', function() {
+        const arr = ['a', 'b', 'c', 'd', 'e'];
+        const notArr = {foo: 'bar'};
+        expect(isArray(arr)).to.equal(Array.isArray(arr))
+        expect(isArray(notArr)).to.equal(Array.isArray(notArr))
     });
     
-    it.skip('correctly implements join', function() {
-        
+    it('correctly implements join', function() {
+        const arr = ['a', 'b', 'c', 'd', 'e'];
+        expect(join(arr)).to.equal(arr.join())
+        expect(join(arr, '!')).to.equal(arr.join('!'))
     });
     
     it.skip('correctly implements keys', function() {
