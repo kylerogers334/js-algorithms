@@ -13,3 +13,5 @@ function repeat(str, count) {
     
     return newStr;
 }
+
+module.exports = repeat;
