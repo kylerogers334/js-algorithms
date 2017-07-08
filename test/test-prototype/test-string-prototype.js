@@ -37,12 +37,18 @@ describe('string-prototype algorithms', function() {
         expect(includes(str, doesntInclude)).to.equal(str.includes(doesntInclude));
     });
     
-    it.skip('correctly implements indexOf', function() {
-        
+    it('correctly implements indexOf', function() {
+        const str = 'abcdefg';
+        expect(indexOf(str, 'd')).to.equal(str.indexOf('d'));
+        expect(indexOf(str, 'd', 2)).to.equal(str.indexOf('d', 2));
+        expect(indexOf(str, 'z')).to.equal(str.indexOf('z'));
     });
 
-    it.skip('correctly implements lastIndexOf', function() {
-        
+    it('correctly implements lastIndexOf', function() {
+        const str = 'abcdedg';
+        expect(lastIndexOf(str, 'd')).to.equal(str.lastIndexOf('d'));
+        expect(lastIndexOf(str, 'd', 3)).to.equal(str.lastIndexOf('d', 3));
+        expect(lastIndexOf(str, 'z')).to.equal(str.lastIndexOf('z'));
     });
     
     it.skip('correctly implements link', function() {
