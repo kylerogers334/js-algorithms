@@ -97,12 +97,20 @@ describe('array-prototype algorithms', function() {
         expect(join(arr, '!')).to.equal(arr.join('!'))
     });
     
-    it.skip('correctly implements keys', function() {
+    it('correctly implements keys', function() {
+        const myIter = keys(['a', 'b', 'c']);
+        const jsIter = ['a', 'b', 'c'].keys();
         
+        for (let i = 0; i < myIter.length; i++) {
+            expect(myIter.next().value)
+                .to.deep.equal(jsIter.next().value);
+        }
     });
     
-    it.skip('correctly implements lastIndexOf', function() {
-        
+    it('correctly implements lastIndexOf', function() {
+        const arr = ['a', 'b', 'a', 'd', 'e'];
+        expect(indexOf(arr, 'a')).to.equal(arr.indexOf('a'));
+        expect(indexOf(arr, 'z')).to.equal(arr.indexOf('z'));
     });
     
     it.skip('correctly implements map', function() {
