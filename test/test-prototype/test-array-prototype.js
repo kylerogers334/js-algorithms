@@ -3,6 +3,8 @@ const expect = require('chai').expect;
 const glob = require( 'glob' )
     , path = require( 'path' );
 
+require('babel-polyfill');
+
 glob.sync( './array-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
     global[p] = require(path.resolve(file));
@@ -70,12 +72,16 @@ describe('array-prototype algorithms', function() {
         expect(forEach(arr, addLetter)).to.deep.equal(arr.forEach(addLetter))
     });
     
-    it.skip('correctly implements includes', function() {
-        
+    it('correctly implements includes', function() {
+        const arr = ['a', 'b', 'c', 'd', 'e'];
+        expect(includes(arr, 'd')).to.equal(arr.includes('d'));
+        expect(includes(arr, 'z')).to.equal(arr.includes('z'));
     });
     
-    it.skip('correctly implements indexOf', function() {
-        
+    it('correctly implements indexOf', function() {
+        const arr = ['a', 'b', 'c', 'd', 'e'];
+        expect(indexOf(arr, 'd')).to.equal(arr.indexOf('d'));
+        expect(indexOf(arr, 'z')).to.equal(arr.indexOf('z'));
     });
 
     it.skip('correctly implements isArray', function() {
