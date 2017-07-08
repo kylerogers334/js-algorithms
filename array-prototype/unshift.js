@@ -1,8 +1,8 @@
 function unshift(arr) {
     const unshiftedArray = [];
     // first add the arguments to a new array
-    for (let i = 0; i < arguments.length; i++) {
-        unshiftedArray[i] = arguments[i+1];
+    for (let i = 1; i < arguments.length; i++) {
+        unshiftedArray[i] = arguments[i];
     }
     // next add the original array
     const newLength = unshiftedArray.length + arr.length - 1;
