@@ -67,20 +67,16 @@ describe('string-prototype algorithms', function() {
         expect(padStart(str, 1)).to.equal(str.padStart(1));
     });
     
-    it.skip('correctly implements repeat', function() {
-        
-    });
-
-    it.skip('correctly implements replace', function() {
-        
+    it('correctly implements repeat', function() {
+        const str = 'abc';
+        expect(repeat(str, 10)).to.equal(str.repeat(10));
     });
     
-    it.skip('correctly implements search', function() {
-        
-    });
-    
-    it.skip('correctly implements slice', function() {
-        
+    it('correctly implements slice', function() {
+        const str = 'abcdefghijklmnopqrstuvwxyz';
+        expect(slice(str, 1, 10)).to.equal(str.slice(1, 10))
+        expect(slice(str, -1, -4)).to.equal(str.slice(-1, -4))
+        expect(slice(str, 0, 100)).to.equal(str.slice(0, 100))
     });
     
     it.skip('correctly implements split', function() {
