@@ -51,20 +51,20 @@ describe('string-prototype algorithms', function() {
         expect(lastIndexOf(str, 'z')).to.equal(str.lastIndexOf('z'));
     });
     
-    it.skip('correctly implements link', function() {
-        
+    it('correctly implements padEnd', function() {
+        const str = 'abc';
+        expect(padEnd(str, 10)).to.equal(str.padEnd(10));
+        expect(padEnd(str, 10, 'foo')).to.equal(str.padEnd(10, 'foo'));
+        expect(padEnd(str, 6, '123456')).to.equal(str.padEnd(6, '123456'));
+        expect(padEnd(str, 1)).to.equal(str.padEnd(1));
     });
     
-    it.skip('correctly implements match', function() {
-        
-    });
-    
-    it.skip('correctly implements padEnd', function() {
-        
-    });
-    
-    it.skip('correctly implements padStart', function() {
-        
+    it('correctly implements padStart', function() {
+        const str = 'abc';
+        expect(padStart(str, 10)).to.equal(str.padStart(10));
+        expect(padStart(str, 10, 'foo')).to.equal(str.padStart(10, 'foo'));
+        expect(padStart(str, 6, '123456')).to.equal(str.padStart(6, '123456'));
+        expect(padStart(str, 1)).to.equal(str.padStart(1));
     });
     
     it.skip('correctly implements repeat', function() {
