@@ -3,25 +3,33 @@ const expect = require('chai').expect;
 const glob = require( 'glob' )
     , path = require( 'path' );
 
-glob.sync( '../../array-prototype/concat.js' ).forEach( function( file ) {
+glob.sync( './array-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
     global[p] = require(path.resolve(file));
 });
 
 describe('array-prototype algorithms', function() {
-    it.skip('correctly implements concat', function() {
-        
+    it('correctly implements concat', function() {
+        const arr1 = ['a', 'b', 'c'];
+        const arr2 = ['d', 'e', 'f'];
+        expect(concat(arr1, arr2)).to.deep.equal(arr1.concat(arr2))
     });
     
     it.skip('correctly implements copyWithin', function() {
         
     });
     
-    it.skip('correctly implements entries', function() {
+    it('correctly implements entries', function() {
+        const myIter = entries(['a', 'b', 'c']);
+        const jsIter = ['a', 'b', 'c'].entries();
         
+        for (let i = 0; i < myIter.length; i++) {
+            expect(myIter.next().value)
+                .to.deep.equal(jsIter.next().value);
+        }
     });
     
-    it.skip('correctly implements every', function() {
+    it('correctly implements every', function() {
         
     });
     
