@@ -125,12 +125,18 @@ describe('array-prototype algorithms', function() {
         expect(of(arr)).to.deep.equal(Array.of(arr));
     });
     
-    it.skip('correctly implements pop', function() {
-        
+    it('correctly implements pop', function() {
+        const arr1 = ['a', 'b', 'a', 'd', 'e'];
+        const arr2 = ['a', 'b', 'a', 'd', 'e'];
+        expect(pop(arr1)).to.deep.equal(arr2.pop());
     });
     
-    it.skip('correctly implements push', function() {
-        
+    it('correctly implements push', function() {
+        const arr1 = ['a', 'b', 'a', 'd', 'e'];
+        const arr2 = ['a', 'b', 'a', 'd', 'e'];
+        const toAdd = ['f', 'g', 'h'];
+        expect(push(arr1, 5)).to.deep.equal(arr2.push(5));
+        expect(push(arr1, toAdd)).to.deep.equal(arr2.push(toAdd));
     });
     
     it.skip('correctly implements reduce', function() {
