@@ -1,36 +1,42 @@
-function split(str, sep, limit) {
-    if (!limit) {
-        limit = str.length;
-    }
-    
-    if (!sep || sep === "") {
+function split(str, sep='', limit=str.length) {
+    if (sep === '') {
         return new Array(str);
     }
-    
+
     const arr = [];
-    let tempStr = "";
+    const sepLen = sep.length;
+    let tempStr = '';
     let tempLimit = 0;
     let j = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === sep || i === str.length - 1) {
+
+    for (let i = 0; i < limit; i++) {
+        if (str.slice(i, i + sepLen) === sep) {
             arr[j] = tempStr;
             tempLimit++;
             if (tempLimit === limit) {
                 break;
+            } // fix an issue with last item being ignored
+            else if (i === limit - 1) {
+                if (str[i] === sep) {
+                    arr[j + 1] = '';
+                } else {
+                    arr[j] = arr[j] + str[i];
+                } 
+                break;
             }
-            tempStr = "";
+            tempStr = '';
             j++;
             continue;
         }
         tempStr += str[i];
     }
+    
+    // no splits fix
+    if (arr.length === 0) {
+        return new Array(str);
+    }
+    
     return arr;
 }
 
-const str1 = "abcdefg";
-const str2 = " 102 123 lakfja nasklf !!)@*";
-
-console.log(split(str1, "a"));
-console.log(split(str2, "a"));
-console.log(split(str2));
-console.log(split(str2, "l", 1));
+module.exports = split;
