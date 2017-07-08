@@ -30,19 +30,32 @@ describe('array-prototype algorithms', function() {
     });
     
     it('correctly implements every', function() {
+        const arr = ['a', 'b', 'c'];
+        const fn = function(i) { if (typeof i === 'string') return true };
         
+        expect(every(arr, fn)).to.equal(arr.every(fn))
     });
     
-    it.skip('correctly implements fill', function() {
-        
+    it('correctly implements fill', function() {
+        const arr = [1, 2, 3];
+        expect(fill(arr, 4)).to.deep.equal(arr.fill(4))
+        expect(fill(arr, 4, 1)).to.deep.equal(arr.fill(4, 1))
+        expect(fill(arr, 4, 1, 2)).to.deep.equal(arr.fill(4, 1, 2))
+        expect(fill(arr, 4, 1, 1)).to.deep.equal(arr.fill(4, 1, 1))
     });
 
-    it.skip('correctly implements filter', function() {
-        
+    it('correctly implements filter', function() {
+        const arr = [1, 2, 3, '4', '5', 6];
+        const numbers = function(i) { return typeof i === 'number' };
+        const strings = function(i) { return typeof i === 'string' };
+        expect(filter(arr, numbers)).to.deep.equal(arr.filter(numbers))
+        expect(filter(arr, strings)).to.deep.equal(arr.filter(strings))
     });
     
-    it.skip('correctly implements find', function() {
-        
+    it('correctly implements find', function() {
+        const arr = [1, 7, 500, 50000, 8];
+        const largeNum = function(i) { return i > 100 };
+        expect(find(arr, largeNum)).to.equal(arr.find(largeNum))
     });
     
     it.skip('correctly implements findIndex', function() {
