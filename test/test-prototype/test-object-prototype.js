@@ -109,15 +109,18 @@ describe('object-prototype algorithms', function() {
         
     });
     
-    it.skip('correctly implements toLocaleString', function() {
-        
+    it('correctly implements toLocaleString', function() {
+        const obj = {foo: 'bar'};
+        expect(toLocaleString(obj)).to.equal(obj.toLocaleString());
     });
     
-    it.skip('correctly implements toString', function() {
-        
+    it('correctly implements toString', function() {
+        const obj = {foo: 'bar'};
+        expect(toString(obj)).to.equal(obj.toString());
     });
     
-    it.skip('correctly implements values', function() {
-        
+    it('correctly implements values', function() {
+        const obj = {foo: 'bar'};
+        expect(values(obj)).to.deep.equal(Object.values(obj));
     });
 });
