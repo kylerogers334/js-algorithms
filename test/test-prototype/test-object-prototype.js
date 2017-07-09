@@ -1,7 +1,8 @@
 'use strict';
+require('babel-polyfill');
 const expect = require('chai').expect;
-const glob = require( 'glob' )
-    , path = require( 'path' );
+const glob = require( 'glob' );
+const path = require( 'path' );
 
 glob.sync( './object-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
@@ -39,12 +40,18 @@ describe('object-prototype algorithms', function() {
         expect(rect instanceof Shape).to.equal(true);
     });
     
-    it.skip('correctly implements entries', function() {
-        
+    it('correctly implements entries', function() {
+        const obj = {fizz: 'buzz', bam: 'boozle'};
+        expect(entries(obj)).to.deep.equal(Object.entries(obj))
     });
     
-    it.skip('correctly implements is', function() {
+    it('correctly implements is', function() {
+        const obj1 = {fizz: 'buzz', bam: 'boozle'};
+        const obj2 = {fizz: 'buzz', bam: 'boozle'};
+        const obj3 = {fizz: 'buzz', bam: 'BOOZLED!!!'};
         
+        expect(is(obj1, obj2)).to.equal(Object.is(obj1, obj2))
+        expect(is(obj1, obj3)).to.equal(Object.is(obj1, obj3))
     });
     
     it.skip('correctly implements isExtensible', function() {
