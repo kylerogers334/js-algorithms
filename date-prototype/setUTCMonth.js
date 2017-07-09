@@ -16,3 +16,5 @@ function setUTCMonth(d, month) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setUTCMonth;

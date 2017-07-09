@@ -5,6 +5,4 @@ function getHours(d) {
             .split(':')[0]);
 }
 
-var date = new Date(Date.now()).getHours()
-// console.log(getHours(date));
-console.log(typeof date);
+module.exports = getHours;

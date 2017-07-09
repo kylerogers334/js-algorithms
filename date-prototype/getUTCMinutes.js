@@ -6,3 +6,5 @@ function getUTCMinutes(d) {
             .split(' ')[4]
             .split(':')[1]);
 }
+
+module.exports = getUTCMinutes;

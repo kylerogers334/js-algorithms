@@ -3,3 +3,5 @@ function getFullYear(d) {
             String(d)
             .split(' ')[3]);
 }
+
+module.exports = getFullYear;

@@ -18,3 +18,5 @@ function setMinutes(d, min) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setMinutes;

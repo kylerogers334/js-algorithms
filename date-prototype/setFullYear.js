@@ -19,3 +19,5 @@ function setFullYear(d, yearVal, monthVal, dayVal) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setFullYear;

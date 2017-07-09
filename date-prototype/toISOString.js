@@ -11,3 +11,5 @@ function toISOString(d) {
 
     return d.slice(0, 20) + ms + 'Z';
 }
+
+module.exports = toISOString;

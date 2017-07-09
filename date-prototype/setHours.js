@@ -19,3 +19,5 @@ function setHours(d, hourVal, minVal, secVal, msVal) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setHours;

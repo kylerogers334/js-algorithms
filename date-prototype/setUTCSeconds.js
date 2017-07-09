@@ -18,3 +18,5 @@ function setUTCSeconds(d, sec) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setUTCSeconds;

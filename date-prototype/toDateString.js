@@ -4,5 +4,5 @@ function toDateString(d) {
             .slice(0, 4)
             .join(" ");
 }
-var x = new Date;
-console.log(toDateString(x))
+
+module.exports = toDateString;

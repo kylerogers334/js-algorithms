@@ -19,6 +19,4 @@ function getDay(d) {
     }
 }
 
-var x = new Date(2017, 7)
-console.log(x.getDay());
-console.log(getDay(x))
+module.exports = getDay;

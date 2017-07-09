@@ -5,6 +5,4 @@ function getMinutes(d) {
             .split(':')[1]);
 }
 
-var date = new Date(Date.now())
-console.log(getMinutes(date));
-console.log(typeof date);
+module.exports = getMinutes;

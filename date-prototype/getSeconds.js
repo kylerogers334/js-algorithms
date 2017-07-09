@@ -5,6 +5,4 @@ function getSeconds(d) {
             .split(':')[2]);
 }
 
-var date = new Date(Date.now())
-console.log(getSeconds(date));
-console.log(typeof date);
+module.exports = getSeconds;

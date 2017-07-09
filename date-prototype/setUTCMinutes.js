@@ -18,3 +18,5 @@ function setUTCMinutes(d, min) {
 
     return Number(new Date(year, month, day, hour, min, sec, ms));
 }
+
+module.exports = setUTCMinutes;

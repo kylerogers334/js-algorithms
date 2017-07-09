@@ -5,6 +5,4 @@ function toTimeString(d) {
             .join(" ");
 }
 
-const x = new Date()
-console.log(toTimeString(x))
-console.log(x.toTimeString())
+module.exports = toTimeString;

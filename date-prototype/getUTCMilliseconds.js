@@ -5,3 +5,5 @@ function getUTCMilliseconds(d) {
     // requiring this mess.
     return String(Number(toUTCString(d))).slice(10, 13);
 }
+
+module.exports = getUTCMilliseconds;

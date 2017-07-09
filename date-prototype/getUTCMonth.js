@@ -28,3 +28,5 @@ function getUTCMonth(d) {
     }
     return d;
 }
+
+module.exports = getUTCMonth;

@@ -24,6 +24,4 @@ function getUTCDay(d) {
     return d;
 }
 
-var x = new Date(2017, 3, 2)
-console.log(x.getUTCDay());
-console.log(getUTCDay(x))
+module.exports = getUTCDay;

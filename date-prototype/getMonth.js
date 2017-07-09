@@ -24,3 +24,5 @@ function getMonth(d) {
     }
     return d;
 }
+
+module.exports = getMonth;
