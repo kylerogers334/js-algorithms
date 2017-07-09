@@ -28,16 +28,19 @@ describe('date-prototype algorithms', function() {
         expect(getDay(d2)).to.equal(d2.getDay());
     });
     
-    it.skip('correctly implements getFullYear', function() {
-        
+    it('correctly implements getFullYear', function() {
+        expect(getFullYear(d1)).to.equal(d1.getFullYear());
+        expect(getFullYear(d2)).to.equal(d2.getFullYear());
     });
     
-    it.skip('correctly implements getHours', function() {
-        
+    it('correctly implements getHours', function() {
+        expect(getHours(d1)).to.equal(d1.getHours());
+        expect(getHours(d2)).to.equal(d2.getHours());
     });
     
-    it.skip('correctly implements getMilliseconds', function() {
-        
+    it('correctly implements getMilliseconds', function() {
+        expect(getMilliseconds(d1)).to.equal(d1.getMilliseconds());
+        expect(getMilliseconds(d2)).to.equal(d2.getMilliseconds());
     });
 
     it.skip('correctly implements getMinutes', function() {
