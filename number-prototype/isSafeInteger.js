@@ -1,8 +1,7 @@
 function isSafeInteger(int) {
+    if (typeof int !== 'number') return false;
+    if (Math.floor(int) !== int) return false;
     return (-(Math.pow(2, 53) - 1) < int && int < (Math.pow(2, 53) + 1));
 }
 
-console.log(isSafeInteger(5)); // true
-console.log(isSafeInteger(-5)); // true
-console.log(isSafeInteger(-590123018239345342342342345512390)); // false
-console.log(isSafeInteger(590123018239345342342342345512390)); // false
+module.exports = isSafeInteger;
