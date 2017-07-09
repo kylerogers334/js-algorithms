@@ -54,12 +54,16 @@ describe('object-prototype algorithms', function() {
         expect(is(obj1, obj3)).to.equal(Object.is(obj1, obj3))
     });
     
-    it.skip('correctly implements isExtensible', function() {
-        
+    it('correctly implements isExtensible', function() {
+        const obj = {fizz: 'buzz', bam: 'boozle'};
+        Object.preventExtensions(obj);
+        expect(isExtensible(obj)).to.be.false;
     });
     
-    it.skip('correctly implements isFrozen', function() {
-        
+    it('correctly implements isFrozen', function() {
+        const obj = {fizz: 'buzz', bam: 'boozle'};
+        Object.freeze(obj);
+        expect(isFrozen(obj)).to.be.true;
     });
     
     it.skip('correctly implements isSealed', function() {
