@@ -66,6 +66,13 @@ describe('object-prototype algorithms', function() {
         expect(isFrozen(obj)).to.be.true;
     });
     
+    it('correctly implements isPrototypeOf', function() {
+        const obj = {very: 'doge'};
+        const str = 'such wow';
+        expect(isPrototypeOf(Object.prototype, obj)).to.be.true;
+        expect(isPrototypeOf(String.prototype, str)).to.be.true;
+    });
+    
     it('correctly implements isSealed', function() {
         const obj = {fizz: 'buzz', bam: 'boozle'};
         Object.seal(obj);
@@ -77,11 +84,28 @@ describe('object-prototype algorithms', function() {
         expect(keys(obj)).to.deep.equal(Object.keys(obj))
     });
     
-    it.skip('correctly implements propertyIsEnumberable', function() {
+    it('correctly implements propertyIsEnumberable', function() {
+        const enumObj = {fizz: 'buzz', bam: 'boozle'};
+        const nonEnumObj = {fizz: 'buzz'};
+        Object.defineProperty(nonEnumObj, 'bam', {
+            enumerable: false,
+            configurable: true,
+            writable: true,
+            value: 'boozle'
+        });
         
+        expect(propertyIsEnumerable(enumObj, 'bam')).to.be.true;
+        expect(propertyIsEnumerable(nonEnumObj, 'bam')).to.be.false;
     });
     
-    it.skip('correctly implements setPrototypeOf', function() {
+    it('correctly implements setPrototypeOf', function() {
+        function dummyPrototype() {
+            this.foo = 'bar';
+            this.bar = 'foo';
+        }
+        const obj = new Object();
+        setPrototypeOf(obj, dummyPrototype);
+        expect(Object.getPrototypeOf(obj)).to.equal(dummyPrototype);
         
     });
     
