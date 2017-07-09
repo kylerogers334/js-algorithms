@@ -1,11 +1,6 @@
 const monthToInt = require('./monthToInt');
 
 function setMilliseconds(d, ms) {
-
-    // Milliseconds must be extracted before coercion.
-    // MS is lost in coercion.
-    const ms = String(Number(d)).slice(10, 13);
-
     d = String(d).split(' ');
 
     const dayTime = d[4].split(':');
