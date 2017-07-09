@@ -43,16 +43,18 @@ describe('date-prototype algorithms', function() {
         expect(getMilliseconds(d2)).to.equal(d2.getMilliseconds());
     });
 
-    it.skip('correctly implements getMinutes', function() {
-        
+    it('correctly implements getMinutes', function() {
+        expect(getMinutes(d1)).to.equal(d1.getMinutes());
+        expect(getMinutes(d2)).to.equal(d2.getMinutes());
     });
     
-    it.skip('correctly implements getMonth', function() {
-        
+    it('correctly implements getMonth', function() {
+        expect(getMonth(d1)).to.equal(d1.getMonth());
     });
     
-    it.skip('correctly implements getSeconds', function() {
-        
+    it('correctly implements getSeconds', function() {
+        expect(getSeconds(d1)).to.equal(d1.getSeconds());
+        expect(getSeconds(d2)).to.equal(d2.getSeconds());
     });
     
     it.skip('correctly implements getTime', function() {
