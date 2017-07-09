@@ -1,5 +1,9 @@
+/* global d1 d2 */
 'use strict';
-const expect = require('chai').expect;
+const chai = require('chai');
+const expect = chai.expect;
+chai.use(require('chai-datetime'));
+
 const glob = require( 'glob' );
 const path = require( 'path' );
 
@@ -9,12 +13,19 @@ glob.sync( './date-prototype/*.js' ).forEach( function( file ) {
 });
 
 describe('date-prototype algorithms', function() {
-    it.skip('correctly implements getDate', function() {
-        
+    beforeEach(function() {
+        global.d1 = new Date();
+        global.d2 = new Date(1992, 6, 15, 11, 22, 330);
     });
     
-    it.skip('correctly implements getDay', function() {
-        
+    it('correctly implements getDate', function() {
+        expect(getDate(d1)).to.equal(d1.getDate());
+        expect(getDate(d2)).to.equal(d2.getDate());
+    });
+    
+    it('correctly implements getDay', function() {
+        expect(getDay(d1)).to.equal(d1.getDay());
+        expect(getDay(d2)).to.equal(d2.getDay());
     });
     
     it.skip('correctly implements getFullYear', function() {
