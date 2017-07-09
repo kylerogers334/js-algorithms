@@ -8,5 +8,4 @@ function isExtensible(obj) {
     }
 }
 
-console.log(isExtensible(Object.preventExtensions({a: '123'})))
-console.log(isExtensible({a: '123'}))
+module.exports = isExtensible;

@@ -8,6 +8,4 @@ function values(obj) {
     return a;
 }
 
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-
-console.log(values(an_obj))
+module.exports = values;

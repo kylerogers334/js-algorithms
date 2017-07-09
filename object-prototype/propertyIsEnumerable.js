@@ -9,23 +9,4 @@ function propertyIsEnumberable(obj, prop) {
     return allProps.includes(prop) && enums.includes(prop);
 }
 
-// const myobj = {};
-
-// Object.defineProperties(myobj, {
-//     'a' : {
-//         value: 1,
-//         enumerable: false
-//     }, 
-//     'b' : {
-//         value: 2,
-//         enumerable: true
-//     },
-//     'c' : {
-//         value: 3,
-//         enumerable: false
-//     }
-// })
-
-// console.log(propertyIsEnumberable(myobj, 'q'));
-
-// console.log(myobj.propertyIsEnumerable('q'))
+module.exports = propertyIsEnumberable;

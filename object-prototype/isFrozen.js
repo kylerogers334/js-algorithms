@@ -13,5 +13,4 @@ function isFrozen(obj) {
     }
 }
 
-console.log(isFrozen(Object.freeze({a: '123'})))
-console.log(isFrozen({a: '123'}))
+module.exports = isFrozen;

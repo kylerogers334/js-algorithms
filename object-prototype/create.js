@@ -7,6 +7,8 @@ function create(prototype, propertiesObject={}) {
     return  newObj;
 }
 
+module.exports = create;
+
 function Shape() {
   this.x = 0;
   this.y = 0;

@@ -16,5 +16,4 @@ function isSealed(obj) {
     }
 }
 
-console.log(isSealed(Object.freeze({a: '123'})))
-console.log(isSealed({a: '123'}))
+module.exports = isSealed;

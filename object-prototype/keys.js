@@ -8,4 +8,4 @@ function keys(obj) {
     return arr;
 }
 
-console.log(keys({a: '1'}))
+module.exports = keys;
