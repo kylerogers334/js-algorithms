@@ -3,53 +3,43 @@ const expect = require('chai').expect;
 const glob = require( 'glob' )
     , path = require( 'path' );
 
-glob.sync( '../../object-prototype/*.js' ).forEach( function( file ) {
+glob.sync( './object-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
     global[p] = require(path.resolve(file));
 });
 
 describe('object-prototype algorithms', function() {
-    it.skip('correctly implements assign', function() {
-        
+    it('correctly implements assign', function() {
+        const myObj = assign({}, {foo: 'bar'}, {baz: true});
+        const jsObj = Object.assign({}, {foo: 'bar'}, {baz: true});
+        expect(myObj).to.deep.equal(jsObj);
     });
     
-    it.skip('correctly implements create', function() {
+    it('correctly implements create', function() {
+        function Shape() {
+            this.x = 0;
+            this.y = 0;
+        }
         
-    });
-    
-    it.skip('correctly implements defineProperties', function() {
+        Shape.prototype.move = function(x, y) {
+            this.x += x;
+            this.y += y;
+        };
+
+        function Rectangle() {
+            Shape.call(this);
+        }
         
-    });
-    
-    it.skip('correctly implements defineProperty', function() {
+        Rectangle.prototype = create(Shape.prototype);
+        Rectangle.prototype.constructor = Rectangle;
         
+        const rect = new Rectangle();
+        
+        expect(rect instanceof Rectangle).to.equal(true);
+        expect(rect instanceof Shape).to.equal(true);
     });
     
     it.skip('correctly implements entries', function() {
-        
-    });
-
-    it.skip('correctly implements getOwnPropertyDescriptor', function() {
-        
-    });
-    
-    it.skip('correctly implements getOwnPropertyDescriptors', function() {
-        
-    });
-    
-    it.skip('correctly implements getOwnPropertyName', function() {
-        
-    });
-    
-    it.skip('correctly implements getOwnPropertySymbols', function() {
-        
-    });
-    
-    it.skip('correctly implements getPrototypeOf', function() {
-        
-    });
-    
-    it.skip('correctly implements hasOwnProperty', function() {
         
     });
     
@@ -86,10 +76,6 @@ describe('object-prototype algorithms', function() {
     });
     
     it.skip('correctly implements toString', function() {
-        
-    });
-    
-    it.skip('correctly implements valueOf', function() {
         
     });
     
