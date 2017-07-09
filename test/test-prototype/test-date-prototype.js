@@ -57,15 +57,16 @@ describe('date-prototype algorithms', function() {
         expect(getSeconds(d2)).to.equal(d2.getSeconds());
     });
     
-    it.skip('correctly implements getTime', function() {
+    it('correctly implements getTime', function() {
+        expect(getTime(d1)).to.equal(d1.getTime());
+        expect(getTime(d2)).to.equal(d2.getTime());
+    });
+    
+    it('correctly implements getTimezoneOffset', function() {
         
     });
     
-    it.skip('correctly implements getTimezoneOffset', function() {
-        
-    });
-    
-    it.skip('correctly implements getUTCDate', function() {
+    it('correctly implements getUTCDate', function() {
         
     });
 
