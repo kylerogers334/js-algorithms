@@ -63,19 +63,23 @@ describe('date-prototype algorithms', function() {
     });
     
     it('correctly implements getTimezoneOffset', function() {
-        
+        expect(getTimezoneOffset(d1)).to.equal(d1.getTimezoneOffset());
+        expect(getTimezoneOffset(d2)).to.equal(d2.getTimezoneOffset());
     });
     
     it('correctly implements getUTCDate', function() {
-        
+        expect(getUTCDate(d1)).to.equal(d1.getUTCDate());
+        expect(getUTCDate(d2)).to.equal(d2.getUTCDate());
     });
 
-    it.skip('correctly implements getUTCDay', function() {
-        
+    it('correctly implements getUTCDay', function() {
+        expect(getUTCDay(d1)).to.equal(d1.getUTCDay());
+        expect(getUTCDay(d2)).to.equal(d2.getUTCDay());
     });
     
-    it.skip('correctly implements getUTCFullYear', function() {
-        
+    it('correctly implements getUTCFullYear', function() {
+        expect(getUTCFullYear(d1)).to.equal(d1.getUTCFullYear());
+        expect(getUTCFullYear(d2)).to.equal(d2.getUTCFullYear());
     });
     
     it.skip('correctly implements getUTCHours', function() {
