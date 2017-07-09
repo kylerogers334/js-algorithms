@@ -1,46 +1,52 @@
 'use strict';
 const expect = require('chai').expect;
-const glob = require( 'glob' )
-    , path = require( 'path' );
+const glob = require( 'glob' );
+const path = require( 'path' );
 
-glob.sync( '../../number-prototype/*.js' ).forEach( function( file ) {
+glob.sync( './number-prototype/*.js' ).forEach( function( file ) {
     const p = path.basename(file).split('.')[0];
     global[p] = require(path.resolve(file));
 });
 
 describe('number-prototype algorithms', function() {
-    it.skip('correctly implements isFinite', function() {
-        
+    it('correctly implements isFinite', function() {
+        expect(isFinite(100      )).to.equal(Number.isFinite(100));
+        expect(isFinite(-9.0918  )).to.equal(Number.isFinite(-9.0918));
+        expect(isFinite(Infinity )).to.equal(Number.isFinite(Infinity));
+        expect(isFinite(-Infinity)).to.equal(Number.isFinite(-Infinity));
     });
     
-    it.skip('correctly implements isInteger', function() {
-        
+    it('correctly implements isInteger', function() {
+        expect(isInteger(9       )).to.equal(Number.isInteger(9))
+        expect(isInteger(-890809 )).to.equal(Number.isInteger(-890809))
+        expect(isInteger(Infinity)).to.equal(Number.isInteger(Infinity))
+        expect(isInteger(9.9809  )).to.equal(Number.isInteger(9.9809))
+        expect(isInteger(-7858.09)).to.equal(Number.isInteger(-7858.09))
     });
     
-    it.skip('correctly implements isSafeInteger', function() {
-        
-    });
-    
-    it.skip('correctly implements parseFloat', function() {
-        
-    });
-    
-    it.skip('correctly implements parseInt', function() {
-        
+    it('correctly implements isSafeInteger', function() {
+        expect(isSafeInteger(3       )).to.equal(Number.isSafeInteger(3));
+        expect(isSafeInteger(Math.pow(2, 53))).to.equal(Number.isSafeInteger(Math.pow(2, 53)));
+        expect(isSafeInteger(Math.pow(2, 53) - 1)).to.equal(Number.isSafeInteger(Math.pow(2, 53) - 1));
+        expect(isSafeInteger(NaN     )).to.equal(Number.isSafeInteger(NaN));
+        expect(isSafeInteger(Infinity)).to.equal(Number.isSafeInteger(Infinity));
+        expect(isSafeInteger('3'     )).to.equal(Number.isSafeInteger('3'));
+        expect(isSafeInteger(3.1     )).to.equal(Number.isSafeInteger(3.1));
+        expect(isSafeInteger(3.0     )).to.equal(Number.isSafeInteger(3.0));
     });
 
     it.skip('correctly implements toExponential', function() {
         
     });
-    
+
     it.skip('correctly implements toFixed', function() {
         
     });
-    
+
     it.skip('correctly implements toPrecision', function() {
         
     });
-    
+
     it.skip('correctly implements toString', function() {
         
     });
