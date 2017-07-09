@@ -66,12 +66,15 @@ describe('object-prototype algorithms', function() {
         expect(isFrozen(obj)).to.be.true;
     });
     
-    it.skip('correctly implements isSealed', function() {
-        
+    it('correctly implements isSealed', function() {
+        const obj = {fizz: 'buzz', bam: 'boozle'};
+        Object.seal(obj);
+        expect(isSealed(obj)).to.be.true;
     });
     
-    it.skip('correctly implements keys', function() {
-        
+    it('correctly implements keys', function() {
+        const obj = {fizz: 'buzz', bam: 'boozle'};
+        expect(keys(obj)).to.deep.equal(Object.keys(obj))
     });
     
     it.skip('correctly implements propertyIsEnumberable', function() {
