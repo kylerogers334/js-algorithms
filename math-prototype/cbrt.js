@@ -1,5 +1,3 @@
 function cbrt(n) {
-    return 1 / n ^ 3;
+    return Math.pow(n, 1/3)
 }
-
-console.log(cbrt(27));
