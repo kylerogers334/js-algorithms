@@ -1,6 +1,7 @@
 function toString(n, r=10) {
         if (!n) return '0';
-        if (n < 0) return '-' + toString(-n);
+        let negative = '';
+        if (n < 0) {n *= -1; negative = '-'}
         let string = '';
         while (n) {
                 const digit = n % r;
@@ -9,9 +10,9 @@ function toString(n, r=10) {
                     digit < 10 ? 0x30 + digit
                     : 0x41 + digit - 10
                 );
-                string = char + string;
+                string = char + string.toLowerCase();
         }
-        return string;
+        return negative + string;
 }
 
 module.exports = toString;
