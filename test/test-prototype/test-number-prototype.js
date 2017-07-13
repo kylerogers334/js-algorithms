@@ -47,7 +47,10 @@ describe('number-prototype algorithms', function() {
         
     });
 
-    it.skip('correctly implements toString', function() {
-        
+    it('correctly implements toString', function() {
+        expect(toString(1234)).to.equal((1234).toString());
+        expect(toString(-890890, 15)).to.equal((-890890).toString(15));
+        expect(toString(-5678, 30)).to.equal((-5678).toString(30));
+        expect(toString(81, 7)).to.equal((81).toString(7));
     });
 });
