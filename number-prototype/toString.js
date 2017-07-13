@@ -14,3 +14,4 @@ function toString(n, r=10) {
         return string;
 }
 
+module.exports = toString;
