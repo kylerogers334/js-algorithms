@@ -35,16 +35,33 @@ describe('number-prototype algorithms', function() {
         expect(isSafeInteger(3.0     )).to.equal(Number.isSafeInteger(3.0));
     });
 
-    it.skip('correctly implements toExponential', function() {
-        
+    it('correctly implements toExponential', function() {
+        const n1 = 77.1234;
+        const n2 = -2.9403e4;
+
+        expect(toExponential(n1)).to.equal(n1.toExponential());
+        expect(toExponential(n1, 2)).to.equal(n1.toExponential(2));
+        expect(toExponential(n1, 4)).to.equal(n1.toExponential(4));
+        expect(toExponential(n2)).to.equal(n2.toExponential());
+        expect(toExponential(n2, 1)).to.equal(n2.toExponential(1));
+        expect(toExponential(n2, 3)).to.equal(n2.toExponential(3));
     });
 
-    it.skip('correctly implements toFixed', function() {
+    it('correctly implements toFixed', function() {
+        const n = 12345.6789;
         
+        expect(toFixed(n)).to.equal(n.toFixed())
+        expect(toFixed(n, 2)).to.equal(n.toFixed(2))
+        expect(toFixed(n, 7)).to.equal(n.toFixed(7))
     });
 
-    it.skip('correctly implements toPrecision', function() {
+    it('correctly implements toPrecision', function() {
+        const n = 5.123456;
         
+        expect(toPrecision(n)).to.equal(n.toPrecision())
+        expect(toPrecision(n, 5)).to.equal(n.toPrecision(5))
+        expect(toPrecision(n, 2)).to.equal(n.toPrecision(2))
+        expect(toPrecision(n, 1)).to.equal(n.toPrecision(1))
     });
 
     it('correctly implements toString', function() {
