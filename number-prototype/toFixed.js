@@ -1,6 +1,6 @@
 function toFixed(n, digits) {
     if (!digits) {
-        return Math.round(n);
+        return String(Math.round(n));
     }
 
     const split = String(n).split('.');
