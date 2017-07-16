@@ -1,22 +1,26 @@
-function toExponential(n, x=0) {
-    if (n < 0 || isNaN(n) || n === Infinity) {
-        return n;
+function toExponential(n, numDigits) {
+    n = Number(n); // handle 504e123 inputs
+    numDigits = numDigits || String(n).length;
+    let sign = '';
+    if (n < 0) {
+        n *= -1;
+        sign = '-';
     }
-    
-    const decimalPlaces = String(n).split('.')[0].length - 1;
-    let str = String(n).split(".").join("");
-    str = str[0] + "." + str.slice(1);
-    
-    // e+decimalPlaces is auto appended for
-    // large numbers.
-    if (str.length > 19) {
-        return str;
+
+    numDigits = Math.floor(numDigits);
+
+    if (numDigits > 20 || numDigits < 0) {
+        throw new RangeError('digits out of range');
     }
-    
-    return str + `e+${decimalPlaces}`;
+
+    const len = String(n).split('.')[0].length - 1 || 1 ;
+    const x = String(n / (Math.pow(10, len))).split('.');
+
+    const int = x[0];
+    let digits = x[1] || '';
+    digits = digits.slice(0, numDigits);
+
+    return sign + int + '.' + digits +'e+' + (len);
 }
-console.log(toExponential(8012312399081230123123123));
-console.log(toExponential(123456789012345678901));
-console.log(123456789012345678901 .toExponential());
-console.log(812.38 .toExponential());
-console.log(toExponential(812.38));
+
+module.exports = toExponential;
