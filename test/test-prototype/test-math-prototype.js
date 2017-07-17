@@ -2,6 +2,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 const chaiStats = require('chai-stats');
+// Non-native implementation is prone to rounding errors
 chai.use(chaiStats);
 const glob = require( 'glob' );
 const path = require( 'path' );
@@ -24,12 +25,16 @@ describe('math-prototype algorithms', function() {
         expect(acos(0)).to.almost.equal(Math.acos(0), 10);
     });
     
-    it.skip('correctly implements acosh', function() {
-        
+    it('correctly implements acosh', function() {
+        expect(acosh(30)).to.almost.equal(Math.acosh(30), 10);
+        expect(acosh(400)).to.almost.equal(Math.acosh(400), 10);
+        expect(acosh(5)).to.almost.equal(Math.acosh(5), 10);
     });
     
-    it.skip('correctly implements asin', function() {
-        
+    it('correctly implements asin', function() {
+        expect(asin(0.6)).to.almost.equal(Math.asin(0.6), 10);
+        expect(asin(-0.85)).to.almost.equal(Math.asin(-0.85), 10);
+        expect(asin(-0.05)).to.almost.equal(Math.asin(-0.05), 10);
     });
     
     it.skip('correctly implements asinh', function() {
