@@ -16,8 +16,13 @@ describe('array-prototype algorithms', function() {
         expect(concat(arr1, arr2)).to.deep.equal(arr1.concat(arr2))
     });
     
-    it.skip('correctly implements copyWithin', function() {
+    it('correctly implements copyWithin', function() {
+        const arr = [1, 2, 3, 4, 5];
         
+        expect(copyWithin(arr, -2)).to.deep.equal(arr.copyWithin(-2))
+        expect(copyWithin(arr, 0, 3)).to.deep.equal(arr.copyWithin(0, 3))
+        expect(copyWithin(arr, 0, 3, 4)).to.deep.equal(arr.copyWithin(0, 3, 4))
+        expect(copyWithin(arr, -2, 3, 1)).to.deep.equal(arr.copyWithin(-2, 3, 1))
     });
     
     it('correctly implements entries', function() {
