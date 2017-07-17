@@ -1,5 +1,8 @@
 'use strict';
-const expect = require('chai').expect;
+const chai = require('chai');
+const expect = chai.expect;
+const chaiStats = require('chai-stats');
+chai.use(chaiStats);
 const glob = require( 'glob' );
 const path = require( 'path' );
 
@@ -9,12 +12,16 @@ glob.sync( './math-prototype/*.js' ).forEach( function( file ) {
 });
 
 describe('math-prototype algorithms', function() {
-    it.skip('correctly implements abs', function() {
-        
+    it('correctly implements abs', function() {
+        expect(abs(-15)).to.equal(Math.abs(-15));
+        expect(abs(-3.1)).to.equal(Math.abs(-3.1));
+        expect(abs(400)).to.equal(Math.abs(400));
     });
     
-    it.skip('correctly implements acos', function() {
-        
+    it('correctly implements acos', function() {
+        expect(acos(0.5)).to.almost.equal(Math.acos(0.5), 10);
+        expect(acos(-0.5)).to.almost.equal(Math.acos(-0.5), 10);
+        expect(acos(0)).to.almost.equal(Math.acos(0), 10);
     });
     
     it.skip('correctly implements acosh', function() {
