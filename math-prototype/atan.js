@@ -6,6 +6,4 @@ function atan(x) {
     return x < 0 ? -sum : sum;
 }
 
-
-console.log(atan(0.11))
-console.log(Math.atan(0.11))
+module.exports = atan;
