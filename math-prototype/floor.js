@@ -7,7 +7,4 @@ function floor(n) {
     return Number(n);
 }
 
-console.log(floor(123123.95));
-console.log(floor(4.95));
-console.log(floor(-4.95));
-console.log(floor(-444.91235));
+module.exports = floor;

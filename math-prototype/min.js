@@ -1,4 +1,3 @@
-'use strict';
 function min() {
     if (arguments.length === 0) return Infinity;
     try {
@@ -14,5 +13,4 @@ function min() {
     }
 }
 
-console.log(min(1,2,3,NaN,5,-980123));
-console.log(min());
+module.exports = min;

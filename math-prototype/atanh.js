@@ -15,5 +15,4 @@ function atanh(x) {
     return x < 0 ? -sum : sum;
 }
 
-console.log(atanh(0.5));
-console.log(Math.atanh(0.5));
+module.exports = atanh;

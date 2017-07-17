@@ -15,11 +15,4 @@ function exp(x) {
     return sum;
 }
 
-console.log(exp(-2/3));
-console.log(Math.exp(-2/3));
-console.log(exp(0));
-console.log(Math.exp(0));
-console.log(exp(-2));
-console.log(Math.exp(-2));
-console.log(exp(11));
-console.log(Math.exp(11));
+module.exports = exp;

@@ -1,4 +1,3 @@
-'use strict';
 function max() {
     if (arguments.length === 0) return -Infinity;
     try {
@@ -14,5 +13,4 @@ function max() {
     }
 }
 
-console.log(max(1,2,3,NaN,5));
-console.log(max());
+module.exports = max;

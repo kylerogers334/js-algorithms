@@ -14,5 +14,4 @@ function sinh(n) {
     return n;
 }
 
-console.log(sinh(-0.12345));
-console.log(Math.sinh(-0.12345));
+module.exports = sinh;

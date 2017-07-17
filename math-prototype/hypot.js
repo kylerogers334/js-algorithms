@@ -8,3 +8,4 @@ function hypot() {
     return Math.sqrt(sum);
 }
 
+module.exports = hypot;

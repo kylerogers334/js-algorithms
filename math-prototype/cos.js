@@ -21,5 +21,4 @@ function cos(x) {
     return n;
 }
 
-console.log(cos(-0.12345));
-console.log(Math.cos(-0.12345));
+module.exports = cos;

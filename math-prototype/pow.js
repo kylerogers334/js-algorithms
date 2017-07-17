@@ -7,3 +7,5 @@ function pow(base, exponent){
     
     return n;
 }
+
+module.exports = pow;

@@ -3,4 +3,4 @@ function abs(n) {
     return n;
 }
 
-console.log(abs(-5)); // 5
+module.exports = abs;

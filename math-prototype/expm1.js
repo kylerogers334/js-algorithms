@@ -1,4 +1,4 @@
-function exp(n) {
+function expm1(n) {
     let e = Math.E;
     let x = e;
     if (n === 0) {
@@ -16,7 +16,4 @@ function exp(n) {
     return x - 1;
 }
 
-console.log(exp(2));
-console.log(exp(0));
-console.log(exp(-2));
-console.log(exp(11));
+module.exports = expm1;

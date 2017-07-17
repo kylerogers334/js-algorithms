@@ -21,5 +21,4 @@ function sin(n) {
     return n;
 }
 
-console.log(sin(-0.12345));
-console.log(Math.sin(-0.12345));
+module.exports = sin;

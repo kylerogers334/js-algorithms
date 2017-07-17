@@ -15,3 +15,4 @@ function round(n) {
     return wholeNum;
 }
 
+module.exports = round;

@@ -13,5 +13,4 @@ function cosh(x) {
     return n;
 }
 
-console.log(cosh(-1.0002345));
-console.log(Math.cosh(-1.0002345));
+module.exports = cosh;
