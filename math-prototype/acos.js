@@ -16,8 +16,8 @@ function acos(x) {
             * Math.pow(n, (2 * i + 1)))
             / (Math.pow(4, i) * Math.pow(factorial(i), 2) * (2 * i + 1)));
     }
-
-    return x < 0 ? -(Math.PI/2 - sum) : Math.PI/2 -sum;
+    
+    return x < 0 ? (Math.PI/2 + sum) : (Math.PI/2 - sum);
 }
 
 module.exports = acos;
