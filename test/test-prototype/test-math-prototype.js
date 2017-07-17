@@ -61,16 +61,22 @@ describe('math-prototype algorithms', function() {
         expect(atanh(-0.05)).to.almost.equal(Math.atanh(-0.05), 10);
     });
     
-    it.skip('correctly implements cbrt', function() {
-        
+    it('correctly implements cbrt', function() {
+        expect(cbrt(81)).to.almost.equal(Math.cbrt(81), 10);
+        expect(cbrt(100000)).to.almost.equal(Math.cbrt(100000), 10);
+        expect(cbrt(3)).to.almost.equal(Math.cbrt(3), 10);
     });
     
-    it.skip('correctly implements ceil', function() {
-        
+    it('correctly implements ceil', function() {
+        expect(ceil(0.001)).to.equal(Math.ceil(0.001));
+        expect(ceil(100.36)).to.equal(Math.ceil(100.36));
+        expect(ceil(-7.87)).to.equal(Math.ceil(-7.87));
     });
     
-    it.skip('correctly implements cos', function() {
-        
+    it('correctly implements cos', function() {
+        expect(cos(0.5)).to.almost.equal(Math.cos(0.5), 10);
+        expect(cos(-0.5)).to.almost.equal(Math.cos(-0.5), 10);
+        expect(cos(0.123)).to.almost.equal(Math.cos(0.123), 10);
     });
 
     it.skip('correctly implements cosh', function() {
