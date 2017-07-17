@@ -37,20 +37,28 @@ describe('math-prototype algorithms', function() {
         expect(asin(-0.05)).to.almost.equal(Math.asin(-0.05), 10);
     });
     
-    it.skip('correctly implements asinh', function() {
-        
+    it('correctly implements asinh', function() {
+        expect(asinh(0.6)).to.almost.equal(Math.asinh(0.6), 10);
+        expect(asinh(-0.85)).to.almost.equal(Math.asinh(-0.85), 10);
+        expect(asinh(-0.05)).to.almost.equal(Math.asinh(-0.05), 10);
     });
 
-    it.skip('correctly implements atan', function() {
-        
+    it('correctly implements atan', function() {
+        expect(atan(0.5)).to.almost.equal(Math.atan(0.5), 10);
+        expect(atan(-0.5)).to.almost.equal(Math.atan(-0.5), 10);
+        expect(atan(0)).to.almost.equal(Math.atan(0), 10);
     });
     
-    it.skip('correctly implements atan2', function() {
-        
+    it('correctly implements atan2', function() {
+        expect(atan2(0.5, 0.3)).to.almost.equal(Math.atan2(0.5, 0.3), 10);
+        expect(atan2(15, 90)).to.almost.equal(Math.atan2(15, 90), 10);
+        expect(atan2(0.1, 0.1)).to.almost.equal(Math.atan2(0.1, 0.1), 10);
     });
     
-    it.skip('correctly implements atanh', function() {
-        
+    it('correctly implements atanh', function() {
+        expect(atanh(0.5)).to.almost.equal(Math.atanh(0.5), 10);
+        expect(atanh(0.99)).to.almost.equal(Math.atanh(0.99), 10);
+        expect(atanh(-0.05)).to.almost.equal(Math.atanh(-0.05), 10);
     });
     
     it.skip('correctly implements cbrt', function() {
