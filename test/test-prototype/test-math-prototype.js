@@ -170,16 +170,22 @@ describe('math-prototype algorithms', function() {
         expect(sign(-7.87)).to.equal(Math.sign(-7.87));
     });
     
-    it.skip('correctly implements sin', function() {
-        
+    it('correctly implements sin', function() {
+        expect(sin(0.5)).to.almost.equal(Math.sin(0.5), 10);
+        expect(sin(-0.5)).to.almost.equal(Math.sin(-0.5), 10);
+        expect(sin(0.123)).to.almost.equal(Math.sin(0.123), 10);
     });
     
-    it.skip('correctly implements sinh', function() {
-        
+    it('correctly implements sinh', function() {
+        expect(sinh(0.5)).to.almost.equal(Math.sinh(0.5), 10);
+        expect(sinh(-0.5)).to.almost.equal(Math.sinh(-0.5), 10);
+        expect(sinh(0.123)).to.almost.equal(Math.sinh(0.123), 10);
     });
         
-    it.skip('correctly implements sqrt', function() {
-        
+    it('correctly implements sqrt', function() {
+        expect(sqrt(20)).to.almost.equal(Math.sqrt(20), 10);
+        expect(sqrt(0.4)).to.almost.equal(Math.sqrt(0.4), 10);
+        expect(sqrt(88998)).to.almost.equal(Math.sqrt(88998), 10);
     });
         
     it.skip('correctly implements tan', function() {
