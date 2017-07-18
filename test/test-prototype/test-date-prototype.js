@@ -101,20 +101,19 @@ describe('date-prototype algorithms', function() {
         expect(getUTCMonth(d1)).to.equal(d1.getUTCMonth());
     });
     
-    it.skip('correctly implements getUTCSeconds', function() {
-        
+    it('correctly implements getUTCSeconds', function() {
+        expect(getUTCSeconds(d1)).to.equal(d1.getUTCSeconds());
+        expect(getUTCSeconds(d2)).to.equal(d2.getUTCSeconds());
     });
     
-    it.skip('correctly implements monthToInt', function() {
-        
+    it('correctly implements setDate', function() {
+        expect(setDate(d1, 5)).to.equal(d1.setDate(5));
+        expect(setDate(d2, 10)).to.equal(d2.setDate(10));
     });
     
-    it.skip('correctly implements setDate', function() {
-        
-    });
-    
-    it.skip('correctly implements setFullYear', function() {
-        
+    it('correctly implements setFullYear', function() {
+        expect(setFullYear(d1, 1991)).to.equal(d1.setFullYear(1991));
+        expect(setFullYear(d2, 2000)).to.equal(d2.setFullYear(2000));
     });
     
     it.skip('correctly implements setHours', function() {
