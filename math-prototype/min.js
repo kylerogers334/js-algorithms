@@ -1,16 +1,13 @@
 function min() {
     if (arguments.length === 0) return Infinity;
-    try {
-        let smallest = Infinity;
-        for (let i = 0; i < arguments.length; i++) {
-            if (arguments[i] < smallest) {
-                smallest = arguments[i];
-            }
+    let smallest = Infinity;
+    for (let i = 0; i < arguments.length; i++) {
+        if (isNaN(Number(arguments[i]))) return NaN;
+        if (arguments[i] < smallest) {
+            smallest = arguments[i];
         }
-        return smallest;
-    } catch (e) {
-        return NaN;
     }
+    return smallest;
 }
 
 module.exports = min;
