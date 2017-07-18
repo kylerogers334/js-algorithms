@@ -158,12 +158,16 @@ describe('math-prototype algorithms', function() {
         });
     });
     
-    it.skip('correctly implements round', function() {
-        
+    it('correctly implements round', function() {
+        expect(round(0.001)).to.equal(Math.round(0.001));
+        expect(round(100.36)).to.equal(Math.round(100.36));
+        expect(round(-7.87)).to.equal(Math.round(-7.87));
     });
     
-    it.skip('correctly implements sign', function() {
-        
+    it('correctly implements sign', function() {
+        expect(sign(0.001)).to.equal(Math.sign(0.001));
+        expect(sign(100.36)).to.equal(Math.sign(100.36));
+        expect(sign(-7.87)).to.equal(Math.sign(-7.87));
     });
     
     it.skip('correctly implements sin', function() {
