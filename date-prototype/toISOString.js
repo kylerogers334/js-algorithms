@@ -1,5 +1,3 @@
-const toJSON = require('./toJSON');
-const toUTCString = require('./toUTCString');
 const monthtoInt = require('./monthToInt');
 
 function toISOString(d) {

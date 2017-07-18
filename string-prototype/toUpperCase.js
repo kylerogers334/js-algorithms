@@ -1,3 +1,4 @@
+/* eslint indent: "off" */
 function toUpperCase(str) {
     const upper = [];
     for (let i = 0; i < str.length; i++) {

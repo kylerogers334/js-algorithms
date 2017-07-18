@@ -74,16 +74,16 @@ describe('string-prototype algorithms', function() {
     
     it('correctly implements slice', function() {
         const str = 'abcdefghijklmnopqrstuvwxyz';
-        expect(slice(str, 1, 10)).to.equal(str.slice(1, 10))
-        expect(slice(str, -1, -4)).to.equal(str.slice(-1, -4))
-        expect(slice(str, 0, 100)).to.equal(str.slice(0, 100))
+        expect(slice(str, 1, 10)).to.equal(str.slice(1, 10));
+        expect(slice(str, -1, -4)).to.equal(str.slice(-1, -4));
+        expect(slice(str, 0, 100)).to.equal(str.slice(0, 100));
     });
     
     it('correctly implements split', function() {
         const str = 'abcdefghijklmnopqrstuvwxyz';
-        expect(split(str)).to.deep.equal(str.split())
-        expect(split(str, 'z')).to.deep.equal(str.split('z'))
-        expect(split(str, '123')).to.deep.equal(str.split('123'))
+        expect(split(str)).to.deep.equal(str.split());
+        expect(split(str, 'z')).to.deep.equal(str.split('z'));
+        expect(split(str, '123')).to.deep.equal(str.split('123'));
     });
     
     it('correctly implements startsWith', function() {
@@ -103,20 +103,20 @@ describe('string-prototype algorithms', function() {
     
     it('correctly implements substring', function() {
         const str = 'abcdefg';
-        expect(substring(str, 0, 3)).to.equal(str.substring(0, 3))
-        expect(substring(str, 3, 0)).to.equal(str.substring(3, 0))
-        expect(substring(str, 4, 7)).to.equal(str.substring(4, 7))
-        expect(substring(str, 89, 90)).to.equal(str.substring(89, 90))
+        expect(substring(str, 0, 3)).to.equal(str.substring(0, 3));
+        expect(substring(str, 3, 0)).to.equal(str.substring(3, 0));
+        expect(substring(str, 4, 7)).to.equal(str.substring(4, 7));
+        expect(substring(str, 89, 90)).to.equal(str.substring(89, 90));
     });
     
     it('correctly implements toLowerCase', function() {
         const str = 'ABC';
-        expect(toLowerCase(str)).to.equal(str.toLowerCase())
+        expect(toLowerCase(str)).to.equal(str.toLowerCase());
     });
     
     it('correctly implements toUpperCase', function() {
         const str = 'abc';
-        expect(toUpperCase(str)).to.equal(str.toUpperCase())
+        expect(toUpperCase(str)).to.equal(str.toUpperCase());
     });
     
     it('correctly implements trimLeft', function() {

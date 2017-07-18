@@ -17,11 +17,11 @@ describe('number-prototype algorithms', function() {
     });
     
     it('correctly implements isInteger', function() {
-        expect(isInteger(9       )).to.equal(Number.isInteger(9))
-        expect(isInteger(-890809 )).to.equal(Number.isInteger(-890809))
-        expect(isInteger(Infinity)).to.equal(Number.isInteger(Infinity))
-        expect(isInteger(9.9809  )).to.equal(Number.isInteger(9.9809))
-        expect(isInteger(-7858.09)).to.equal(Number.isInteger(-7858.09))
+        expect(isInteger(9       )).to.equal(Number.isInteger(9));
+        expect(isInteger(-890809 )).to.equal(Number.isInteger(-890809));
+        expect(isInteger(Infinity)).to.equal(Number.isInteger(Infinity));
+        expect(isInteger(9.9809  )).to.equal(Number.isInteger(9.9809));
+        expect(isInteger(-7858.09)).to.equal(Number.isInteger(-7858.09));
     });
     
     it('correctly implements isSafeInteger', function() {
@@ -50,18 +50,18 @@ describe('number-prototype algorithms', function() {
     it('correctly implements toFixed', function() {
         const n = 12345.6789;
         
-        expect(toFixed(n)).to.equal(n.toFixed())
-        expect(toFixed(n, 2)).to.equal(n.toFixed(2))
-        expect(toFixed(n, 7)).to.equal(n.toFixed(7))
+        expect(toFixed(n)).to.equal(n.toFixed());
+        expect(toFixed(n, 2)).to.equal(n.toFixed(2));
+        expect(toFixed(n, 7)).to.equal(n.toFixed(7));
     });
 
     it('correctly implements toPrecision', function() {
         const n = 5.123456;
         
-        expect(toPrecision(n)).to.equal(n.toPrecision())
-        expect(toPrecision(n, 5)).to.equal(n.toPrecision(5))
-        expect(toPrecision(n, 2)).to.equal(n.toPrecision(2))
-        expect(toPrecision(n, 1)).to.equal(n.toPrecision(1))
+        expect(toPrecision(n)).to.equal(n.toPrecision());
+        expect(toPrecision(n, 5)).to.equal(n.toPrecision(5));
+        expect(toPrecision(n, 2)).to.equal(n.toPrecision(2));
+        expect(toPrecision(n, 1)).to.equal(n.toPrecision(1));
     });
 
     it('correctly implements toString', function() {

@@ -8,8 +8,7 @@ function toString(n, r=10) {
         const digit = n % r;
         n = (n - digit) / r;
         const char = String.fromCodePoint(
-            digit < 10 ? 0x30 + digit
-            : 0x41 + digit - 10
+            digit < 10 ? 0x30 + digit : 0x41 + digit - 10
         );
         string = char + string.toLowerCase();
     }

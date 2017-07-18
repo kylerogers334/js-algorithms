@@ -1,3 +1,4 @@
+/* eslint indent: "off" */
 function toLowerCase(str) {
     const lower = [];
     for (let i = 0; i < str.length; i++) {

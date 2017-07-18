@@ -11,7 +11,7 @@ function toUTCString(d) {
     if (hourDiff > 23) {
         hourDiff -= 24;
         if (hourDiff === 0) {
-            hourDiff + "0";
+            hourDiff + '0';
         }
     }
 
@@ -22,7 +22,7 @@ function toUTCString(d) {
             d.substring(11, 16) +
             hourDiff +
             d.substring(18, 24) +
-            " GMT";
+            ' GMT';
 }
 
 module.exports = toUTCString;

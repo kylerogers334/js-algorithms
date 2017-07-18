@@ -1,3 +1,5 @@
+/* eslint indent: "off" */
+
 function keys(array) {
     let nextIndex = 0;
     

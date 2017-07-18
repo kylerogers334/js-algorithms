@@ -13,16 +13,16 @@ describe('array-prototype algorithms', function() {
     it('correctly implements concat', function() {
         const arr1 = ['a', 'b', 'c'];
         const arr2 = ['d', 'e', 'f'];
-        expect(concat(arr1, arr2)).to.deep.equal(arr1.concat(arr2))
+        expect(concat(arr1, arr2)).to.deep.equal(arr1.concat(arr2));
     });
     
     it('correctly implements copyWithin', function() {
         const arr = [1, 2, 3, 4, 5];
         
-        expect(copyWithin(arr, -2)).to.deep.equal(arr.copyWithin(-2))
-        expect(copyWithin(arr, 0, 3)).to.deep.equal(arr.copyWithin(0, 3))
-        expect(copyWithin(arr, 0, 3, 4)).to.deep.equal(arr.copyWithin(0, 3, 4))
-        expect(copyWithin(arr, -2, 3, 1)).to.deep.equal(arr.copyWithin(-2, 3, 1))
+        expect(copyWithin(arr, -2)).to.deep.equal(arr.copyWithin(-2));
+        expect(copyWithin(arr, 0, 3)).to.deep.equal(arr.copyWithin(0, 3));
+        expect(copyWithin(arr, 0, 3, 4)).to.deep.equal(arr.copyWithin(0, 3, 4));
+        expect(copyWithin(arr, -2, 3, 1)).to.deep.equal(arr.copyWithin(-2, 3, 1));
     });
     
     it('correctly implements entries', function() {
@@ -37,43 +37,43 @@ describe('array-prototype algorithms', function() {
     
     it('correctly implements every', function() {
         const arr = ['a', 'b', 'c'];
-        const fn = function(i) { if (typeof i === 'string') return true };
+        const fn = function(i) { if (typeof i === 'string') return true; };
         
-        expect(every(arr, fn)).to.equal(arr.every(fn))
+        expect(every(arr, fn)).to.equal(arr.every(fn));
     });
     
     it('correctly implements fill', function() {
         const arr = [1, 2, 3];
-        expect(fill(arr, 4)).to.deep.equal(arr.fill(4))
-        expect(fill(arr, 4, 1)).to.deep.equal(arr.fill(4, 1))
-        expect(fill(arr, 4, 1, 2)).to.deep.equal(arr.fill(4, 1, 2))
-        expect(fill(arr, 4, 1, 1)).to.deep.equal(arr.fill(4, 1, 1))
+        expect(fill(arr, 4)).to.deep.equal(arr.fill(4));
+        expect(fill(arr, 4, 1)).to.deep.equal(arr.fill(4, 1));
+        expect(fill(arr, 4, 1, 2)).to.deep.equal(arr.fill(4, 1, 2));
+        expect(fill(arr, 4, 1, 1)).to.deep.equal(arr.fill(4, 1, 1));
     });
 
     it('correctly implements filter', function() {
         const arr = [1, 2, 3, '4', '5', 6];
-        const numbers = function(i) { return typeof i === 'number' };
-        const strings = function(i) { return typeof i === 'string' };
-        expect(filter(arr, numbers)).to.deep.equal(arr.filter(numbers))
-        expect(filter(arr, strings)).to.deep.equal(arr.filter(strings))
+        const numbers = function(i) { return typeof i === 'number'; };
+        const strings = function(i) { return typeof i === 'string'; };
+        expect(filter(arr, numbers)).to.deep.equal(arr.filter(numbers));
+        expect(filter(arr, strings)).to.deep.equal(arr.filter(strings));
     });
     
     it('correctly implements find', function() {
         const arr = [1, 7, 500, 50000, 8];
-        const largeNum = function(i) { return i > 100 };
+        const largeNum = function(i) { return i > 100; };
         expect(find(arr, largeNum)).to.equal(arr.find(largeNum));
     });
     
     it('correctly implements findIndex', function() {
         const arr = [1, 7, 500, 50000, 8];
-        const largeNum = function(i) { return i > 100 };
+        const largeNum = function(i) { return i > 100; };
         expect(findIndex(arr, largeNum)).to.equal(arr.findIndex(largeNum));
     });
     
     it('correctly implements forEach', function() {
         const arr = ['a', 'b', 'c', 'd', 'e'];
-        const addLetter = function(i) { arr[i] += 'z' };
-        expect(forEach(arr, addLetter)).to.deep.equal(arr.forEach(addLetter))
+        const addLetter = function(i) { arr[i] += 'z'; };
+        expect(forEach(arr, addLetter)).to.deep.equal(arr.forEach(addLetter));
     });
     
     it('correctly implements includes', function() {
@@ -91,14 +91,14 @@ describe('array-prototype algorithms', function() {
     it('correctly implements isArray', function() {
         const arr = ['a', 'b', 'c', 'd', 'e'];
         const notArr = {foo: 'bar'};
-        expect(isArray(arr)).to.equal(Array.isArray(arr))
-        expect(isArray(notArr)).to.equal(Array.isArray(notArr))
+        expect(isArray(arr)).to.equal(Array.isArray(arr));
+        expect(isArray(notArr)).to.equal(Array.isArray(notArr));
     });
     
     it('correctly implements join', function() {
         const arr = ['a', 'b', 'c', 'd', 'e'];
-        expect(join(arr)).to.equal(arr.join())
-        expect(join(arr, '!')).to.equal(arr.join('!'))
+        expect(join(arr)).to.equal(arr.join());
+        expect(join(arr, '!')).to.equal(arr.join('!'));
     });
     
     it('correctly implements keys', function() {
@@ -119,8 +119,8 @@ describe('array-prototype algorithms', function() {
     
     it('correctly implements map', function() {
         const arr = [1, 2, 3, 4, 5, 6];
-        const add10 = function(i) { return i + 10 };
-        expect(map(arr, add10)).to.deep.equal(arr.map(add10))
+        const add10 = function(i) { return i + 10; };
+        expect(map(arr, add10)).to.deep.equal(arr.map(add10));
     });
     
     it('correctly implements of', function() {
@@ -145,19 +145,19 @@ describe('array-prototype algorithms', function() {
     
     it('correctly implements reduce', function() {
         const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-        const evens = function(i) { return i % 2 === 0 };
-        expect(reduce(arr, evens)).to.deep.equal(arr.reduce(evens))
+        const evens = function(i) { return i % 2 === 0; };
+        expect(reduce(arr, evens)).to.deep.equal(arr.reduce(evens));
     });
     
     it('correctly implements reduceRight', function() {
         const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-        const odds = function(i) { return i % 2 !== 0 };
-        expect(reduceRight(arr, odds)).to.deep.equal(arr.reduceRight(odds))
+        const odds = function(i) { return i % 2 !== 0; };
+        expect(reduceRight(arr, odds)).to.deep.equal(arr.reduceRight(odds));
     });
     
     it('correctly implements reverse', function() {
         const arr = ['a', 'b', 'c', 'd', 'e'];
-        expect(reverse(arr)).to.deep.equal(arr.reverse())
+        expect(reverse(arr)).to.deep.equal(arr.reverse());
     });
     
     it('correctly implements shift', function() {
@@ -169,21 +169,21 @@ describe('array-prototype algorithms', function() {
     
     it('correctly implements slice', function() {
         const arr = ['a', 'b', 'c', 'd', 'e'];
-        expect(slice(arr, 1, 3)).to.deep.equal(arr.slice(1, 3))
-        expect(slice(arr, 0, 2)).to.deep.equal(arr.slice(0, 2))
+        expect(slice(arr, 1, 3)).to.deep.equal(arr.slice(1, 3));
+        expect(slice(arr, 0, 2)).to.deep.equal(arr.slice(0, 2));
     });
     
     it('correctly implements some', function() {
         const bigArr = [12, 5, 8, 1, 4];
         const smallArr = [0, 5, 8, 1, 4];
-        const isBig = function(i) { return i > 10 };
-        expect(some(bigArr, isBig)).to.equal(bigArr.some(isBig))
-        expect(some(smallArr, isBig)).to.equal(smallArr.some(isBig))
+        const isBig = function(i) { return i > 10; };
+        expect(some(bigArr, isBig)).to.equal(bigArr.some(isBig));
+        expect(some(smallArr, isBig)).to.equal(smallArr.some(isBig));
     });
     
     it('correctly implements sort', function() {
         const arr = [0, 5, 3, 2, 9, 8, 4, 1, 2, 7];
-        const reverseSort = function(a, b) { return b - a };
+        const reverseSort = function(a, b) { return b - a; };
         expect(sort(arr)).to.deep.equal(arr.sort());
         expect(sort(arr, reverseSort)).to.deep.equal(arr.sort(reverseSort));
     });

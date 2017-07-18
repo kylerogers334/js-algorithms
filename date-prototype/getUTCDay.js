@@ -1,3 +1,4 @@
+/* eslint indent: "off" */
 const toUTCString = require('./toUTCString');
 
 function getUTCDay(d) {

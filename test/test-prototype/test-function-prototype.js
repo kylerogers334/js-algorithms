@@ -1,6 +1,6 @@
 'use strict';
 const expect = require('chai').expect;
-const glob = require( 'glob' )
+const glob = require( 'glob' );
 const path = require( 'path' );
 
 glob.sync( './function-prototype/*.js' ).forEach( function( file ) {
@@ -54,10 +54,10 @@ describe('function-prototype algorithms', function() {
     });
 
     it('correctly implements bind', function() {
-        this.x = 'global'
+        this.x = 'global';
         const module = {
-          x: 'local',
-          getX: function() { return this.x; }
+            x: 'local',
+            getX: function() { return this.x; }
         };
         const myGetX = bind(module.getX, module);
         const jsGetX = module.getX.bind(module);

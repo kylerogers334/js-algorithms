@@ -1,4 +1,4 @@
-function toString(obj) {
+function toString() {
     return '[object Object]';
 }
 

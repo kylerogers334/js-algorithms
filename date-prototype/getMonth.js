@@ -1,3 +1,5 @@
+/* eslint indent: "off" */
+
 function getMonth(d) {
     // Turn date into number of days in UNIX time.
     d = Math.floor(Number(d) / 2592000000);

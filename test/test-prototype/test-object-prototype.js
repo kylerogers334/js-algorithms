@@ -42,7 +42,7 @@ describe('object-prototype algorithms', function() {
     
     it('correctly implements entries', function() {
         const obj = {fizz: 'buzz', bam: 'boozle'};
-        expect(entries(obj)).to.deep.equal(Object.entries(obj))
+        expect(entries(obj)).to.deep.equal(Object.entries(obj));
     });
     
     it('correctly implements is', function() {
@@ -50,8 +50,8 @@ describe('object-prototype algorithms', function() {
         const obj2 = {fizz: 'buzz', bam: 'boozle'};
         const obj3 = {fizz: 'buzz', bam: 'BOOZLED!!!'};
         
-        expect(is(obj1, obj2)).to.equal(Object.is(obj1, obj2))
-        expect(is(obj1, obj3)).to.equal(Object.is(obj1, obj3))
+        expect(is(obj1, obj2)).to.equal(Object.is(obj1, obj2));
+        expect(is(obj1, obj3)).to.equal(Object.is(obj1, obj3));
     });
     
     it('correctly implements isExtensible', function() {
@@ -81,7 +81,7 @@ describe('object-prototype algorithms', function() {
     
     it('correctly implements keys', function() {
         const obj = {fizz: 'buzz', bam: 'boozle'};
-        expect(keys(obj)).to.deep.equal(Object.keys(obj))
+        expect(keys(obj)).to.deep.equal(Object.keys(obj));
     });
     
     it('correctly implements propertyIsEnumberable', function() {

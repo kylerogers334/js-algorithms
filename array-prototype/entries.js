@@ -1,3 +1,5 @@
+/* eslint indent: "off" */
+
 function entries(array) {
     let nextIndex = 0;
     
