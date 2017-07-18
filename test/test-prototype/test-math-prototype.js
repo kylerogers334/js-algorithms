@@ -122,15 +122,20 @@ describe('math-prototype algorithms', function() {
     });
     
     it('correctly implements log1p', function() {
-        
+        expect(log1p(4)).to.almost.equal(Math.log1p(4), 10);
+        expect(log1p(40)).to.almost.equal(Math.log1p(40), 10);
+        expect(log1p(0.5)).to.almost.equal(Math.log1p(0.5), 10);
     });
     
-    it.skip('correctly implements log2', function() {
-        
+    it('correctly implements log2', function() {
+        expect(log2(4)).to.almost.equal(Math.log2(4), 10);
+        expect(log2(40)).to.almost.equal(Math.log2(40), 10);
+        expect(log2(0.5)).to.almost.equal(Math.log2(0.5), 10);
     });
     
-    it.skip('correctly implements max', function() {
-        
+    it('correctly implements max', function() {
+        expect(max(1, 2, 3)).to.equal(Math.max(1, 2, 3));
+        expect(max(-1, 'abc', 1)).to.equal(Math.max(-1, 'abc', 1));
     });
     
     it.skip('correctly implements min', function() {
