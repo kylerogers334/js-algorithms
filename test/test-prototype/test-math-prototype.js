@@ -188,16 +188,22 @@ describe('math-prototype algorithms', function() {
         expect(sqrt(88998)).to.almost.equal(Math.sqrt(88998), 10);
     });
         
-    it.skip('correctly implements tan', function() {
-        
+    it('correctly implements tan', function() {
+        expect(tan(0.5)).to.almost.equal(Math.tan(0.5), 10);
+        expect(tan(-0.5)).to.almost.equal(Math.tan(-0.5), 10);
+        expect(tan(0.123)).to.almost.equal(Math.tan(0.123), 10);
     });
         
-    it.skip('correctly implements tanh', function() {
-        
+    it('correctly implements tanh', function() {
+        expect(tanh(0.5)).to.almost.equal(Math.tanh(0.5), 10);
+        expect(tanh(-0.5)).to.almost.equal(Math.tanh(-0.5), 10);
+        expect(tanh(0.123)).to.almost.equal(Math.tanh(0.123), 10);
     });
         
-    it.skip('correctly implements trunc', function() {
-        
+    it('correctly implements trunc', function() {
+        expect(trunc(123.123)).to.equal(Math.trunc(123.123));
+        expect(trunc(-123.123)).to.equal(Math.trunc(-123.123));
+        expect(trunc(-0.456)).to.equal(Math.trunc(-0.456));
     });
     
 });
