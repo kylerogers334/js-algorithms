@@ -5,7 +5,7 @@ function repeat(str, count) {
     }
     
     count = Math.floor(count);
-    let newStr = "";
+    let newStr = '';
     
     for (let i = 0; i++ < count;) {
         newStr += str;

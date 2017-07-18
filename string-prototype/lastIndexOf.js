@@ -1,5 +1,5 @@
 function lastIndexOf(str, toFind, fromIndex) {
-    if (fromIndex > str.length || typeof fromIndex === "undefined") {
+    if (fromIndex > str.length || typeof fromIndex === 'undefined') {
         fromIndex = str.length - 1;
     }
     

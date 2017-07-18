@@ -7,7 +7,7 @@ function substr(str, start=0, length=str.length) {
         }
     }
 
-    let newStr = "";
+    let newStr = '';
 
     for (let i = 0; i < length; i++) {
         if (str[start + i] !== undefined) {

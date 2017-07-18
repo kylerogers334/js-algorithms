@@ -1,4 +1,4 @@
-function padEnd(str, targetLength, padStr=" ") {
+function padEnd(str, targetLength, padStr=' ') {
     if (targetLength < str.length) return str;
     if (padStr.length > targetLength) return padStr.slice(0, targetLength);
 

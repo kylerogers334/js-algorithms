@@ -1,4 +1,4 @@
-function padStart(str, targetLength, padStr=" ") {
+function padStart(str, targetLength, padStr=' ') {
     if (targetLength < str.length) return str;
     if (padStr.length > targetLength) return padStr.slice(0, targetLength);
 
