@@ -79,12 +79,16 @@ describe('math-prototype algorithms', function() {
         expect(cos(0.123)).to.almost.equal(Math.cos(0.123), 10);
     });
 
-    it.skip('correctly implements cosh', function() {
-        
+    it('correctly implements cosh', function() {
+        expect(cosh(0.5)).to.almost.equal(Math.cosh(0.5), 10);
+        expect(cosh(-0.5)).to.almost.equal(Math.cosh(-0.5), 10);
+        expect(cosh(0.123)).to.almost.equal(Math.cosh(0.123), 10);
     });
     
-    it.skip('correctly implements exp', function() {
-        
+    it('correctly implements exp', function() {
+        expect(exp(10)).to.almost.equal(Math.exp(10))
+        expect(exp(5)).to.almost.equal(Math.exp(5))
+        expect(exp(0.1)).to.almost.equal(Math.exp(0.1))
     });
     
     it.skip('correctly implements expm1', function() {
