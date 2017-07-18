@@ -9,7 +9,7 @@ function exp(x) {
 
     let sum = 0;
     for (let i = 0; i < 50; i++) {
-        sum += (x ** i) / factorial(i);
+        sum += (Math.pow(x, i)) / factorial(i);
     }
     
     return sum;

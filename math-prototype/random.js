@@ -39,7 +39,7 @@ function random() {
 
     function random() {
         if (next >= 624)
-          twist();
+            twist();
 
         let x = state[next++];
         x ^=  x >>> 11;

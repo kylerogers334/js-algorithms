@@ -3,7 +3,7 @@ function round(n) {
 
     n = String(n).split('.');
     const wholeNum = Number(n[0]);
-    const decimals = "0." + n[1];
+    const decimals = '0.' + n[1];
 
     if (decimals >= 0.5) {
         if (isPos) {

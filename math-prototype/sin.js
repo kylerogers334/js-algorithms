@@ -7,15 +7,15 @@ function sin(n) {
         return f;
     }
     
-    let sign = "-";
+    let sign = '-';
     /* 9 iteration taylor series is enough to converge in almost all situations */
     for (let i = 3; i <= 19; i += 2) {
-        if (sign === "-") {
+        if (sign === '-') {
             n -= Math.pow(x, i) / factorial(i);
-            sign = "+";
+            sign = '+';
         } else {
             n += Math.pow(x, i) / factorial(i);
-            sign = "-";
+            sign = '-';
         }
     }
     return n;

@@ -6,16 +6,16 @@ function cos(x) {
         return f;
     }
     let n = 1 - Math.pow(x, 2) / 2;
-    let sign = "+";
+    let sign = '+';
     
     /* 9 iteration taylor series is enough to converge in almost all situations */
     for (let i = 4; i <= 18; i += 2) {
-    if (sign === "-") {
+        if (sign === '-') {
             n -= Math.pow(x, i) / factorial(i);
-            sign = "+";
+            sign = '+';
         } else {
             n += Math.pow(x, i) / factorial(i);
-            sign = "-";
+            sign = '-';
         }
     }
     return n;
