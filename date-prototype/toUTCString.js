@@ -16,10 +16,13 @@ function toUTCString(d) {
     }
 
     // New date frankenstein'd together.
-    return d.substring(0, 16) +
-           hourDiff +
-           d.substring(18, 24) +
-           " GMT+0000 (UTC)";
+    return d.substring(0, 3) + ', ' +
+            d.substring(8, 11) +
+            d.substring(4, 8) +
+            d.substring(11, 16) +
+            hourDiff +
+            d.substring(18, 24) +
+            " GMT";
 }
 
 module.exports = toUTCString;
