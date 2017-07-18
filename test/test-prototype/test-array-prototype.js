@@ -4,12 +4,14 @@ const expect = require('chai').expect;
 const glob = require( 'glob' );
 const path = require( 'path' );
 
-glob.sync( './array-prototype/*.js' ).forEach( function( file ) {
-    const p = path.basename(file).split('.')[0];
-    global[p] = require(path.resolve(file));
-});
-
 describe('array-prototype algorithms', function() {
+    before(function() {
+        glob.sync( './array-prototype/*.js' ).forEach( function( file ) {
+            const p = path.basename(file).split('.')[0];
+            global[p] = require(path.resolve(file));
+        });
+    });
+    
     it('correctly implements concat', function() {
         const arr1 = ['a', 'b', 'c'];
         const arr2 = ['d', 'e', 'f'];

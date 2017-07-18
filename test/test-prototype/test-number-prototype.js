@@ -3,12 +3,14 @@ const expect = require('chai').expect;
 const glob = require( 'glob' );
 const path = require( 'path' );
 
-glob.sync( './number-prototype/*.js' ).forEach( function( file ) {
-    const p = path.basename(file).split('.')[0];
-    global[p] = require(path.resolve(file));
-});
-
 describe('number-prototype algorithms', function() {
+    before(function() {
+        glob.sync( './number-prototype/*.js' ).forEach( function( file ) {
+            const p = path.basename(file).split('.')[0];
+            global[p] = require(path.resolve(file));
+        });
+    });
+    
     it('correctly implements isFinite', function() {
         expect(isFinite(100      )).to.equal(Number.isFinite(100));
         expect(isFinite(-9.0918  )).to.equal(Number.isFinite(-9.0918));

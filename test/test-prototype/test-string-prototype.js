@@ -4,12 +4,14 @@ const expect = require('chai').expect;
 const glob = require( 'glob' );
 const path = require( 'path' );
 
-glob.sync( './string-prototype/*.js' ).forEach( function( file ) {
-    const p = path.basename(file).split('.')[0];
-    global[p] = require(path.resolve(file));
-});
-
 describe('string-prototype algorithms', function() {
+    before(function() {
+        glob.sync( './string-prototype/*.js' ).forEach( function( file ) {
+            const p = path.basename(file).split('.')[0];
+            global[p] = require(path.resolve(file));
+        });
+    });
+    
     it('correctly implements charAt', function() {
         const str = 'abcdefg';
         expect(charAt(str, 3)).to.equal(str.charAt(3));
