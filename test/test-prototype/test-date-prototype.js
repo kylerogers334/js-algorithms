@@ -131,16 +131,19 @@ describe('date-prototype algorithms', function() {
         expect(setMinutes(d2, 57)).to.equal(d2.setMinutes(57));
     });
     
-    it.skip('correctly implements setMonth', function() {
-        
+    it('correctly implements setMonth', function() {
+        expect(setMonth(d1, 10)).to.equal(d1.setMonth(10));
+        expect(setMonth(d2, 3)).to.equal(d2.setMonth(3));
     });
     
-    it.skip('correctly implements setSeconds', function() {
-        
+    it('correctly implements setSeconds', function() {
+        expect(setSeconds(d1, 10)).to.equal(d1.setSeconds(10));
+        expect(setSeconds(d2, 57)).to.equal(d2.setSeconds(57));
     });
     
-    it.skip('correctly implements setTime', function() {
-        
+    it('correctly implements setTime', function() {
+        expect(setTime(d1, 100000)).to.equal(d1.setTime(100000));
+        expect(setTime(d1, 999999)).to.equal(d2.setTime(999999));
     });
     
     it.skip('correctly implements setUTCDate', function() {
