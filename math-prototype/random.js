@@ -8,7 +8,7 @@ function random() {
     // The ECMA spec calls for between 0 and 1.
     function format(n) {
         // padStart requires node 8+ or 7.5+ with harmony flag.
-        return '0.' + String(n).padStart(9, '0');
+        return Number('0.' + String(n).padStart(9, '0'));
     }
 
     function twist() {
