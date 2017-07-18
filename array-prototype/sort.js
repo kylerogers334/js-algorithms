@@ -1,7 +1,7 @@
 function sort(arr, compareFn) {
     if (!compareFn) { 
         // sort lowest to highest by default
-        compareFn = function(a, b) { return a - b };
+        compareFn = function(a, b) { return a - b; };
     }
 
     for (let n = 0; n < arr.length; n++) {
