@@ -1,5 +1,6 @@
 /* global d1 d2 */
 'use strict';
+require('babel-polyfill');
 const chai = require('chai');
 const expect = chai.expect;
 chai.use(require('chai-datetime'));
@@ -176,20 +177,24 @@ describe('date-prototype algorithms', function() {
         expect(setUTCSeconds(d2, 15)).to.equal(d2.setUTCSeconds(15));
     });
         
-    it.skip('correctly implements toDateString', function() {
-        
+    it('correctly implements toDateString', function() {
+        expect(toDateString(d1)).to.equal(d1.toDateString());
+        expect(toDateString(d2)).to.equal(d2.toDateString());
     });
         
-    it.skip('correctly implements toISOString', function() {
-        
+    it('correctly implements toISOString', function() {
+        expect(toISOString(d1)).to.equal(d1.toISOString());
+        expect(toISOString(d2)).to.equal(d2.toISOString());
     });
         
-    it.skip('correctly implements toJSON', function() {
-        
+    it('correctly implements toJSON', function() {
+        expect(toJSON(d1)).to.equal(d1.toJSON());
+        expect(toJSON(d2)).to.equal(d2.toJSON());
     });
         
-    it.skip('correctly implements toTimeString', function() {
-        
+    it('correctly implements toTimeString', function() {
+        expect(toTimeString(d1)).to.equal(d1.toTimeString());
+        expect(toTimeString(d2)).to.equal(d2.toTimeString());
     });
         
     it('correctly implements toUTCString', function() {
