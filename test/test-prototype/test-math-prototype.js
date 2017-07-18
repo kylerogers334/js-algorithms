@@ -1,4 +1,5 @@
 'use strict';
+require('babel-polyfill');
 const chai = require('chai');
 const expect = chai.expect;
 const chaiStats = require('chai-stats');
@@ -135,19 +136,26 @@ describe('math-prototype algorithms', function() {
     
     it('correctly implements max', function() {
         expect(max(1, 2, 3)).to.equal(Math.max(1, 2, 3));
-        expect(max(-1, 'abc', 1)).to.equal(Math.max(-1, 'abc', 1));
+        expect(max(-1, 'abc', 1)).to.be.NaN;
     });
     
-    it.skip('correctly implements min', function() {
-        
+    it('correctly implements min', function() {
+        expect(min(1, 2, 3)).to.equal(Math.min(1, 2, 3));
+        expect(min(-1, 'abc', 1)).to.be.NaN;
     });
     
-    it.skip('correctly implements pow', function() {
-        
+    it('correctly implements pow', function() {
+        expect(pow(2, 8)).to.equal(Math.pow(2, 8));
+        expect(pow(-2, 8)).to.equal(Math.pow(-2, 8));
+        expect(pow(2, -8)).to.equal(Math.pow(2, -8));
     });
     
-    it.skip('correctly implements random', function() {
-        
+    it('correctly implements random', function() {
+        const vals = Array(20).fill(random());
+        vals.forEach(function(i) {
+            expect(i).to.be.lessThan(1);
+            expect(i).to.be.greaterThan(0);
+        });
     });
     
     it.skip('correctly implements round', function() {
