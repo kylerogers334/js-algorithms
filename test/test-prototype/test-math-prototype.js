@@ -103,12 +103,16 @@ describe('math-prototype algorithms', function() {
         expect(ceil(-7.87)).to.equal(Math.ceil(-7.87));
     });
     
-    it.skip('correctly implements hypot', function() {
-        
+    it('correctly implements hypot', function() {
+        expect(hypot(1, 2, 3, 4)).to.almost.equal(Math.hypot(1, 2, 3, 4), 10);
+        expect(hypot(-1, -3, 5000)).to.almost.equal(Math.hypot(-1, -3, 5000), 10);
+        expect(hypot(5, 5)).to.almost.equal(Math.hypot(5, 5), 10);
     });
     
-    it.skip('correctly implements log', function() {
-        
+    it('correctly implements log', function() {
+        expect(log(4)).to.almost.equal(Math.log(4), 10);
+        expect(log(40)).to.almost.equal(Math.log(40), 10);
+        expect(log(0.5)).to.almost.equal(Math.log(0.5), 10);
     });
     
     it.skip('correctly implements log10', function() {
