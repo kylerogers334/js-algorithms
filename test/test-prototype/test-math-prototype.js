@@ -86,17 +86,21 @@ describe('math-prototype algorithms', function() {
     });
     
     it('correctly implements exp', function() {
-        expect(exp(10)).to.almost.equal(Math.exp(10))
-        expect(exp(5)).to.almost.equal(Math.exp(5))
-        expect(exp(0.1)).to.almost.equal(Math.exp(0.1))
+        expect(exp(10)).to.almost.equal(Math.exp(10));
+        expect(exp(5)).to.almost.equal(Math.exp(5));
+        expect(exp(0.1)).to.almost.equal(Math.exp(0.1));
     });
     
-    it.skip('correctly implements expm1', function() {
-        
+    it('correctly implements expm1', function() {
+        expect(exp(10)).to.almost.equal(Math.exp(10));
+        expect(exp(5)).to.almost.equal(Math.exp(5));
+        expect(exp(0.1)).to.almost.equal(Math.exp(0.1));
     });
     
-    it.skip('correctly implements floor', function() {
-        
+    it('correctly implements floor', function() {
+        expect(ceil(0.001)).to.equal(Math.ceil(0.001));
+        expect(ceil(100.36)).to.equal(Math.ceil(100.36));
+        expect(ceil(-7.87)).to.equal(Math.ceil(-7.87));
     });
     
     it.skip('correctly implements hypot', function() {
