@@ -161,16 +161,19 @@ describe('date-prototype algorithms', function() {
         expect(setUTCHours(d2, 15)).to.equal(d2.setUTCHours(15));
     });
         
-    it.skip('correctly implements setUTCMilliseconds', function() {
-        
+    it('correctly implements setUTCMilliseconds', function() {
+        expect(setUTCMilliseconds(d1, 876)).to.equal(d1.setUTCMilliseconds(876));
+        expect(setUTCMilliseconds(d2, 123)).to.equal(d2.setUTCMilliseconds(123));
     });
         
-    it.skip('correctly implements setUTCMonth', function() {
-        
+    it('correctly implements setUTCMonth', function() {
+        expect(setUTCMonth(d1, 10)).to.equal(d1.setUTCMonth(10));
+        expect(setUTCMonth(d2, 15)).to.equal(d2.setUTCMonth(15));
     });
         
-    it.skip('correctly implements setUTCSeconds', function() {
-        
+    it('correctly implements setUTCSeconds', function() {
+        expect(setUTCSeconds(d1, 10)).to.equal(d1.setUTCSeconds(10));
+        expect(setUTCSeconds(d2, 15)).to.equal(d2.setUTCSeconds(15));
     });
         
     it.skip('correctly implements toDateString', function() {
