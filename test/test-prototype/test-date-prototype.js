@@ -1,9 +1,7 @@
 /* global d1 d2 */
 'use strict';
 require('babel-polyfill');
-const chai = require('chai');
-const expect = chai.expect;
-chai.use(require('chai-datetime'));
+const expect = require('chai').expect;
 
 const glob = require( 'glob' );
 const path = require( 'path' );
