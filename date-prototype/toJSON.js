@@ -18,7 +18,7 @@ function toJSON(d) {
 
     // Milliseconds have to be extracted before date is
     // coerced into a string.
-    const ms    = String(Number(d)).slice(10, 13);
+    const ms    = String(Number(d)).slice(10, 13).padStart(3, '0');
     d = String(d).split(' ');
 
     const dayTime = d[4].split(':');
