@@ -116,16 +116,19 @@ describe('date-prototype algorithms', function() {
         expect(setFullYear(d2, 2000)).to.equal(d2.setFullYear(2000));
     });
     
-    it.skip('correctly implements setHours', function() {
-        
+    it('correctly implements setHours', function() {
+        expect(setHours(d1, 3)).to.equal(d1.setHours(3));
+        expect(setHours(d2, 17)).to.equal(d2.setHours(17));
     });
     
-    it.skip('correctly implements setMilliseconds', function() {
-        
+    it('correctly implements setMilliseconds', function() {
+        expect(setMilliseconds(d1, 400)).to.equal(d1.setMilliseconds(400));
+        expect(setMilliseconds(d2, 123)).to.equal(d2.setMilliseconds(123));
     });
     
-    it.skip('correctly implements setMinutes', function() {
-        
+    it('correctly implements setMinutes', function() {
+        expect(setMinutes(d1, 10)).to.equal(d1.setMinutes(10));
+        expect(setMinutes(d2, 57)).to.equal(d2.setMinutes(57));
     });
     
     it.skip('correctly implements setMonth', function() {
