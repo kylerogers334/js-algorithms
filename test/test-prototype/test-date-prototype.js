@@ -82,20 +82,23 @@ describe('date-prototype algorithms', function() {
         expect(getUTCFullYear(d2)).to.equal(d2.getUTCFullYear());
     });
     
-    it.skip('correctly implements getUTCHours', function() {
-        
+    it('correctly implements getUTCHours', function() {
+        expect(getUTCHours(d1)).to.equal(d1.getUTCHours());
+        expect(getUTCHours(d2)).to.equal(d2.getUTCHours());
     });
     
-    it.skip('correctly implements getUTCMilliseconds', function() {
-        
+    it('correctly implements getUTCMilliseconds', function() {
+        expect(getUTCMilliseconds(d1)).to.equal(d1.getUTCMilliseconds());
+        expect(getUTCMilliseconds(d2)).to.equal(d2.getUTCMilliseconds());
     });
     
-    it.skip('correctly implements getUTCMinutes', function() {
-        
+    it('correctly implements getUTCMinutes', function() {
+        expect(getUTCMinutes(d1)).to.equal(d1.getUTCMinutes());
+        expect(getUTCMinutes(d2)).to.equal(d2.getUTCMinutes());
     });
     
-    it.skip('correctly implements getUTCMonth', function() {
-        
+    it('correctly implements getUTCMonth', function() {
+        expect(getUTCMonth(d1)).to.equal(d1.getUTCMonth());
     });
     
     it.skip('correctly implements getUTCSeconds', function() {
@@ -178,7 +181,8 @@ describe('date-prototype algorithms', function() {
         
     });
         
-    it.skip('correctly implements toUTCString', function() {
-        
+    it('correctly implements toUTCString', function() {
+        expect(toUTCString(d1)).to.equal(d1.toUTCString());
+        expect(toUTCString(d2)).to.equal(d2.toUTCString());
     });
 });
