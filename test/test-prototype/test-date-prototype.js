@@ -146,16 +146,19 @@ describe('date-prototype algorithms', function() {
         expect(setTime(d1, 999999)).to.equal(d2.setTime(999999));
     });
     
-    it.skip('correctly implements setUTCDate', function() {
-        
+    it('correctly implements setUTCDate', function() {
+        expect(setUTCDate(d1, 10)).to.equal(d1.setUTCDate(10));
+        expect(setUTCDate(d2, 15)).to.equal(d2.setUTCDate(15));
     });
         
-    it.skip('correctly implements setUTCFullYear', function() {
-        
+    it('correctly implements setUTCFullYear', function() {
+        expect(setUTCFullYear(d1, 1999)).to.equal(d1.setUTCFullYear(1999));
+        expect(setUTCFullYear(d2, 2011)).to.equal(d2.setUTCFullYear(2011));
     });
         
-    it.skip('correctly implements setUTCHours', function() {
-        
+    it('correctly implements setUTCHours', function() {
+        expect(setUTCHours(d1, 10)).to.equal(d1.setUTCHours(10));
+        expect(setUTCHours(d2, 15)).to.equal(d2.setUTCHours(15));
     });
         
     it.skip('correctly implements setUTCMilliseconds', function() {
