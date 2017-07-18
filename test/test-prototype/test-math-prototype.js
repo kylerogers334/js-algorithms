@@ -115,11 +115,13 @@ describe('math-prototype algorithms', function() {
         expect(log(0.5)).to.almost.equal(Math.log(0.5), 10);
     });
     
-    it.skip('correctly implements log10', function() {
-        
+    it('correctly implements log10', function() {
+        expect(log10(4)).to.almost.equal(Math.log10(4), 10);
+        expect(log10(40)).to.almost.equal(Math.log10(40), 10);
+        expect(log10(0.5)).to.almost.equal(Math.log10(0.5), 10);
     });
     
-    it.skip('correctly implements log1p', function() {
+    it('correctly implements log1p', function() {
         
     });
     
